@@ -1,0 +1,4502 @@
+[
+  {
+    "logId": "LOG-001",
+    "farmerId": "FARM-080",
+    "timestamp": "2026-09-06T12:34:18.767Z",
+    "quantityLiters": 13,
+    "fatPercentage": 7.4,
+    "snfPercentage": 8,
+    "calculatedPayout": 361.25
+  },
+  {
+    "logId": "LOG-002",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T01:55:18.768Z",
+    "quantityLiters": 33.3,
+    "fatPercentage": 2.6,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1911.14
+  },
+  {
+    "logId": "LOG-003",
+    "farmerId": "FARM-012",
+    "timestamp": "2026-09-06T12:42:18.768Z",
+    "quantityLiters": 42.7,
+    "fatPercentage": 6.1,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1537.4
+  },
+  {
+    "logId": "LOG-004",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 30.1,
+    "fatPercentage": 2.2,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 1078.79
+  },
+  {
+    "logId": "LOG-005",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:49:18.768Z",
+    "quantityLiters": 22.6,
+    "fatPercentage": 2.4,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 381.39
+  },
+  {
+    "logId": "LOG-006",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T01:31:18.768Z",
+    "quantityLiters": 16,
+    "fatPercentage": 5.5,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 235.16
+  },
+  {
+    "logId": "LOG-007",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T12:54:18.768Z",
+    "quantityLiters": 26.3,
+    "fatPercentage": 2,
+    "snfPercentage": 9,
+    "calculatedPayout": 1192.09
+  },
+  {
+    "logId": "LOG-008",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T02:26:18.768Z",
+    "quantityLiters": 38.7,
+    "fatPercentage": 7.9,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 350.7
+  },
+  {
+    "logId": "LOG-009",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T12:50:18.768Z",
+    "quantityLiters": 42.7,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1395.88
+  },
+  {
+    "logId": "LOG-010",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T01:49:18.768Z",
+    "quantityLiters": 17.5,
+    "fatPercentage": 4.5,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 439.88
+  },
+  {
+    "logId": "LOG-011",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T13:17:18.768Z",
+    "quantityLiters": 9,
+    "fatPercentage": 5.3,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1274.04
+  },
+  {
+    "logId": "LOG-012",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 20.9,
+    "fatPercentage": 6.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 1624.44
+  },
+  {
+    "logId": "LOG-013",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T12:51:18.768Z",
+    "quantityLiters": 39.8,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 2025.25
+  },
+  {
+    "logId": "LOG-014",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T02:02:18.768Z",
+    "quantityLiters": 20.8,
+    "fatPercentage": 3.8,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1317.05
+  },
+  {
+    "logId": "LOG-015",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T13:28:18.768Z",
+    "quantityLiters": 37.1,
+    "fatPercentage": 3.5,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1404.43
+  },
+  {
+    "logId": "LOG-016",
+    "farmerId": "FARM-034",
+    "timestamp": "2026-09-06T01:55:18.768Z",
+    "quantityLiters": 43.8,
+    "fatPercentage": 7.9,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 1761.75
+  },
+  {
+    "logId": "LOG-017",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T13:11:18.768Z",
+    "quantityLiters": 39.7,
+    "fatPercentage": 6.5,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 1953.71
+  },
+  {
+    "logId": "LOG-018",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T01:48:18.768Z",
+    "quantityLiters": 47.8,
+    "fatPercentage": 5.3,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 667.82
+  },
+  {
+    "logId": "LOG-019",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 31.2,
+    "fatPercentage": 2.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 1760.64
+  },
+  {
+    "logId": "LOG-020",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T02:11:18.768Z",
+    "quantityLiters": 44.3,
+    "fatPercentage": 2.5,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1960.59
+  },
+  {
+    "logId": "LOG-021",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T12:55:18.768Z",
+    "quantityLiters": 48.9,
+    "fatPercentage": 3.3,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1639.09
+  },
+  {
+    "logId": "LOG-022",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T01:39:18.768Z",
+    "quantityLiters": 26.1,
+    "fatPercentage": 5,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 306.89
+  },
+  {
+    "logId": "LOG-023",
+    "farmerId": "FARM-020",
+    "timestamp": "2026-09-06T13:14:18.768Z",
+    "quantityLiters": 13.3,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 1162.44
+  },
+  {
+    "logId": "LOG-024",
+    "farmerId": "FARM-047",
+    "timestamp": "2026-09-06T01:39:18.768Z",
+    "quantityLiters": 35,
+    "fatPercentage": 2.7,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 655.8
+  },
+  {
+    "logId": "LOG-025",
+    "farmerId": "FARM-053",
+    "timestamp": "2026-09-06T12:48:18.768Z",
+    "quantityLiters": 15.5,
+    "fatPercentage": 4.4,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 1276.92
+  },
+  {
+    "logId": "LOG-026",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T02:07:18.768Z",
+    "quantityLiters": 32.5,
+    "fatPercentage": 5.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 1413.34
+  },
+  {
+    "logId": "LOG-027",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T12:52:18.768Z",
+    "quantityLiters": 16.5,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1062.78
+  },
+  {
+    "logId": "LOG-028",
+    "farmerId": "FARM-027",
+    "timestamp": "2026-09-06T01:57:18.768Z",
+    "quantityLiters": 45.1,
+    "fatPercentage": 6,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 995.92
+  },
+  {
+    "logId": "LOG-029",
+    "farmerId": "FARM-079",
+    "timestamp": "2026-09-06T13:25:18.768Z",
+    "quantityLiters": 35.5,
+    "fatPercentage": 2,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 212.34
+  },
+  {
+    "logId": "LOG-030",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T02:01:18.768Z",
+    "quantityLiters": 17.9,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1258.07
+  },
+  {
+    "logId": "LOG-031",
+    "farmerId": "FARM-092",
+    "timestamp": "2026-09-06T12:48:18.768Z",
+    "quantityLiters": 23.6,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1565.32
+  },
+  {
+    "logId": "LOG-032",
+    "farmerId": "FARM-054",
+    "timestamp": "2026-09-06T01:50:18.768Z",
+    "quantityLiters": 6.8,
+    "fatPercentage": 5.5,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 270.35
+  },
+  {
+    "logId": "LOG-033",
+    "farmerId": "FARM-050",
+    "timestamp": "2026-09-06T12:34:18.768Z",
+    "quantityLiters": 37.7,
+    "fatPercentage": 3.3,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 1352.16
+  },
+  {
+    "logId": "LOG-034",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T01:33:18.768Z",
+    "quantityLiters": 8.3,
+    "fatPercentage": 2.8,
+    "snfPercentage": 8,
+    "calculatedPayout": 1796.83
+  },
+  {
+    "logId": "LOG-035",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T12:41:18.768Z",
+    "quantityLiters": 24.7,
+    "fatPercentage": 5.2,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 363.91
+  },
+  {
+    "logId": "LOG-036",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T01:47:18.768Z",
+    "quantityLiters": 49.9,
+    "fatPercentage": 2,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 373.69
+  },
+  {
+    "logId": "LOG-037",
+    "farmerId": "FARM-047",
+    "timestamp": "2026-09-06T13:15:18.768Z",
+    "quantityLiters": 27.9,
+    "fatPercentage": 3.3,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 2373.22
+  },
+  {
+    "logId": "LOG-038",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T01:52:18.768Z",
+    "quantityLiters": 35,
+    "fatPercentage": 2.4,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 970.85
+  },
+  {
+    "logId": "LOG-039",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T12:54:18.768Z",
+    "quantityLiters": 22.9,
+    "fatPercentage": 5.7,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1883.42
+  },
+  {
+    "logId": "LOG-040",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T02:11:18.768Z",
+    "quantityLiters": 15.5,
+    "fatPercentage": 5.3,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 977.21
+  },
+  {
+    "logId": "LOG-041",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T12:31:18.768Z",
+    "quantityLiters": 48.7,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 868.98
+  },
+  {
+    "logId": "LOG-042",
+    "farmerId": "FARM-062",
+    "timestamp": "2026-09-06T02:00:18.768Z",
+    "quantityLiters": 14.7,
+    "fatPercentage": 7.4,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1469.25
+  },
+  {
+    "logId": "LOG-043",
+    "farmerId": "FARM-093",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 40.9,
+    "fatPercentage": 5.3,
+    "snfPercentage": 7,
+    "calculatedPayout": 2327.38
+  },
+  {
+    "logId": "LOG-044",
+    "farmerId": "FARM-001",
+    "timestamp": "2026-09-06T01:39:18.768Z",
+    "quantityLiters": 16.3,
+    "fatPercentage": 7.1,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 784.62
+  },
+  {
+    "logId": "LOG-045",
+    "farmerId": "FARM-042",
+    "timestamp": "2026-09-06T13:21:18.768Z",
+    "quantityLiters": 35.1,
+    "fatPercentage": 7.9,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 1705.1
+  },
+  {
+    "logId": "LOG-046",
+    "farmerId": "FARM-069",
+    "timestamp": "2026-09-06T01:44:18.768Z",
+    "quantityLiters": 5.6,
+    "fatPercentage": 7,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 1707.38
+  },
+  {
+    "logId": "LOG-047",
+    "farmerId": "FARM-092",
+    "timestamp": "2026-09-06T12:57:18.768Z",
+    "quantityLiters": 49.6,
+    "fatPercentage": 7.5,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1678.22
+  },
+  {
+    "logId": "LOG-048",
+    "farmerId": "FARM-079",
+    "timestamp": "2026-09-06T02:21:18.768Z",
+    "quantityLiters": 18.5,
+    "fatPercentage": 3,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1351.26
+  },
+  {
+    "logId": "LOG-049",
+    "farmerId": "FARM-034",
+    "timestamp": "2026-09-06T12:49:18.768Z",
+    "quantityLiters": 45.2,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1218.26
+  },
+  {
+    "logId": "LOG-050",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T02:23:18.768Z",
+    "quantityLiters": 14.2,
+    "fatPercentage": 7.9,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 2024.17
+  },
+  {
+    "logId": "LOG-051",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T13:02:18.768Z",
+    "quantityLiters": 40.1,
+    "fatPercentage": 2,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 291.22
+  },
+  {
+    "logId": "LOG-052",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T01:55:18.768Z",
+    "quantityLiters": 43.6,
+    "fatPercentage": 4.2,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1233.43
+  },
+  {
+    "logId": "LOG-053",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 8,
+    "fatPercentage": 2.7,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 1154.21
+  },
+  {
+    "logId": "LOG-054",
+    "farmerId": "FARM-061",
+    "timestamp": "2026-09-06T01:32:18.768Z",
+    "quantityLiters": 34.5,
+    "fatPercentage": 5,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 1563.74
+  },
+  {
+    "logId": "LOG-055",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T12:52:18.768Z",
+    "quantityLiters": 25.1,
+    "fatPercentage": 4.3,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 652.75
+  },
+  {
+    "logId": "LOG-056",
+    "farmerId": "FARM-056",
+    "timestamp": "2026-09-06T02:09:18.768Z",
+    "quantityLiters": 30.9,
+    "fatPercentage": 6,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1954.19
+  },
+  {
+    "logId": "LOG-057",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 31.6,
+    "fatPercentage": 4.7,
+    "snfPercentage": 9,
+    "calculatedPayout": 1578.57
+  },
+  {
+    "logId": "LOG-058",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T01:43:18.768Z",
+    "quantityLiters": 38.7,
+    "fatPercentage": 7.7,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1548.51
+  },
+  {
+    "logId": "LOG-059",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T13:15:18.768Z",
+    "quantityLiters": 12.5,
+    "fatPercentage": 2.5,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1352.44
+  },
+  {
+    "logId": "LOG-060",
+    "farmerId": "FARM-070",
+    "timestamp": "2026-09-06T02:17:18.768Z",
+    "quantityLiters": 5.3,
+    "fatPercentage": 3.4,
+    "snfPercentage": 9,
+    "calculatedPayout": 299.16
+  },
+  {
+    "logId": "LOG-061",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T12:36:18.768Z",
+    "quantityLiters": 12.8,
+    "fatPercentage": 6.7,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1233.54
+  },
+  {
+    "logId": "LOG-062",
+    "farmerId": "FARM-094",
+    "timestamp": "2026-09-06T01:58:18.768Z",
+    "quantityLiters": 46.2,
+    "fatPercentage": 4,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 722.85
+  },
+  {
+    "logId": "LOG-063",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T12:30:18.768Z",
+    "quantityLiters": 19.5,
+    "fatPercentage": 7.8,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 2496.91
+  },
+  {
+    "logId": "LOG-064",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T02:27:18.768Z",
+    "quantityLiters": 38,
+    "fatPercentage": 6.7,
+    "snfPercentage": 10,
+    "calculatedPayout": 1672.3
+  },
+  {
+    "logId": "LOG-065",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T12:45:18.768Z",
+    "quantityLiters": 12.5,
+    "fatPercentage": 7.7,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 806.49
+  },
+  {
+    "logId": "LOG-066",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T02:03:18.768Z",
+    "quantityLiters": 16.1,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1803.07
+  },
+  {
+    "logId": "LOG-067",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T13:02:18.768Z",
+    "quantityLiters": 6.8,
+    "fatPercentage": 4.1,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1980.92
+  },
+  {
+    "logId": "LOG-068",
+    "farmerId": "FARM-001",
+    "timestamp": "2026-09-06T02:26:18.768Z",
+    "quantityLiters": 14.8,
+    "fatPercentage": 3.9,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 639.67
+  },
+  {
+    "logId": "LOG-069",
+    "farmerId": "FARM-047",
+    "timestamp": "2026-09-06T13:13:18.768Z",
+    "quantityLiters": 26.3,
+    "fatPercentage": 2,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 596.88
+  },
+  {
+    "logId": "LOG-070",
+    "farmerId": "FARM-051",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 29.7,
+    "fatPercentage": 2,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1756.87
+  },
+  {
+    "logId": "LOG-071",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 15.6,
+    "fatPercentage": 6.6,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1506.38
+  },
+  {
+    "logId": "LOG-072",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T02:25:18.768Z",
+    "quantityLiters": 24.1,
+    "fatPercentage": 3.3,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 997.29
+  },
+  {
+    "logId": "LOG-073",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T13:28:18.768Z",
+    "quantityLiters": 43.4,
+    "fatPercentage": 6.3,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1936.9
+  },
+  {
+    "logId": "LOG-074",
+    "farmerId": "FARM-004",
+    "timestamp": "2026-09-06T02:27:18.768Z",
+    "quantityLiters": 15.4,
+    "fatPercentage": 5.7,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1143.75
+  },
+  {
+    "logId": "LOG-075",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 42.6,
+    "fatPercentage": 2.9,
+    "snfPercentage": 10,
+    "calculatedPayout": 2195.62
+  },
+  {
+    "logId": "LOG-076",
+    "farmerId": "FARM-053",
+    "timestamp": "2026-09-06T01:41:18.768Z",
+    "quantityLiters": 37.7,
+    "fatPercentage": 7.5,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1906.01
+  },
+  {
+    "logId": "LOG-077",
+    "farmerId": "FARM-001",
+    "timestamp": "2026-09-06T12:44:18.768Z",
+    "quantityLiters": 45.4,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 2489.79
+  },
+  {
+    "logId": "LOG-078",
+    "farmerId": "FARM-056",
+    "timestamp": "2026-09-06T02:09:18.768Z",
+    "quantityLiters": 48.6,
+    "fatPercentage": 2.8,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1301.84
+  },
+  {
+    "logId": "LOG-079",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T12:41:18.768Z",
+    "quantityLiters": 18.5,
+    "fatPercentage": 7.4,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 240.79
+  },
+  {
+    "logId": "LOG-080",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T01:37:18.768Z",
+    "quantityLiters": 48,
+    "fatPercentage": 2.6,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 1318.24
+  },
+  {
+    "logId": "LOG-081",
+    "farmerId": "FARM-044",
+    "timestamp": "2026-09-06T12:49:18.768Z",
+    "quantityLiters": 15.6,
+    "fatPercentage": 7.4,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1132.77
+  },
+  {
+    "logId": "LOG-082",
+    "farmerId": "FARM-030",
+    "timestamp": "2026-09-06T01:40:18.768Z",
+    "quantityLiters": 8.7,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1841.06
+  },
+  {
+    "logId": "LOG-083",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 16.5,
+    "fatPercentage": 6,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 513.01
+  },
+  {
+    "logId": "LOG-084",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T02:20:18.768Z",
+    "quantityLiters": 22.7,
+    "fatPercentage": 4.3,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 490.77
+  },
+  {
+    "logId": "LOG-085",
+    "farmerId": "FARM-076",
+    "timestamp": "2026-09-06T12:55:18.768Z",
+    "quantityLiters": 9.3,
+    "fatPercentage": 5.3,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 2397.37
+  },
+  {
+    "logId": "LOG-086",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 10.2,
+    "fatPercentage": 5.4,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 1611.89
+  },
+  {
+    "logId": "LOG-087",
+    "farmerId": "FARM-093",
+    "timestamp": "2026-09-06T13:26:18.768Z",
+    "quantityLiters": 6.6,
+    "fatPercentage": 3.1,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1495.3
+  },
+  {
+    "logId": "LOG-088",
+    "farmerId": "FARM-022",
+    "timestamp": "2026-09-06T02:05:18.768Z",
+    "quantityLiters": 42.2,
+    "fatPercentage": 3,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 2481.42
+  },
+  {
+    "logId": "LOG-089",
+    "farmerId": "FARM-060",
+    "timestamp": "2026-09-06T12:49:18.768Z",
+    "quantityLiters": 40.4,
+    "fatPercentage": 6.4,
+    "snfPercentage": 8,
+    "calculatedPayout": 889.47
+  },
+  {
+    "logId": "LOG-090",
+    "farmerId": "FARM-076",
+    "timestamp": "2026-09-06T01:52:18.768Z",
+    "quantityLiters": 29.2,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1657.03
+  },
+  {
+    "logId": "LOG-091",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T12:53:18.768Z",
+    "quantityLiters": 20.5,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 974.56
+  },
+  {
+    "logId": "LOG-092",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T02:14:18.768Z",
+    "quantityLiters": 14,
+    "fatPercentage": 2.1,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1388.38
+  },
+  {
+    "logId": "LOG-093",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T12:34:18.768Z",
+    "quantityLiters": 34.4,
+    "fatPercentage": 4.9,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1980.91
+  },
+  {
+    "logId": "LOG-094",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T02:26:18.768Z",
+    "quantityLiters": 40.9,
+    "fatPercentage": 5.3,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 274.62
+  },
+  {
+    "logId": "LOG-095",
+    "farmerId": "FARM-069",
+    "timestamp": "2026-09-06T13:22:18.768Z",
+    "quantityLiters": 38.9,
+    "fatPercentage": 2.5,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1408.87
+  },
+  {
+    "logId": "LOG-096",
+    "farmerId": "FARM-074",
+    "timestamp": "2026-09-06T01:50:18.768Z",
+    "quantityLiters": 31.1,
+    "fatPercentage": 4.1,
+    "snfPercentage": 7,
+    "calculatedPayout": 988.85
+  },
+  {
+    "logId": "LOG-097",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T13:22:18.768Z",
+    "quantityLiters": 18.5,
+    "fatPercentage": 3,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 1168.29
+  },
+  {
+    "logId": "LOG-098",
+    "farmerId": "FARM-089",
+    "timestamp": "2026-09-06T02:01:18.768Z",
+    "quantityLiters": 11.6,
+    "fatPercentage": 3.4,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 1049.43
+  },
+  {
+    "logId": "LOG-099",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:01:18.768Z",
+    "quantityLiters": 22.8,
+    "fatPercentage": 6.2,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1239.23
+  },
+  {
+    "logId": "LOG-100",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T02:06:18.768Z",
+    "quantityLiters": 29.4,
+    "fatPercentage": 5.1,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1232.79
+  },
+  {
+    "logId": "LOG-101",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T12:47:18.768Z",
+    "quantityLiters": 16.7,
+    "fatPercentage": 6.3,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1643.44
+  },
+  {
+    "logId": "LOG-102",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T02:03:18.768Z",
+    "quantityLiters": 11.7,
+    "fatPercentage": 3.1,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 449.14
+  },
+  {
+    "logId": "LOG-103",
+    "farmerId": "FARM-093",
+    "timestamp": "2026-09-06T12:37:18.768Z",
+    "quantityLiters": 49.9,
+    "fatPercentage": 6.5,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1990.97
+  },
+  {
+    "logId": "LOG-104",
+    "farmerId": "FARM-076",
+    "timestamp": "2026-09-06T02:13:18.768Z",
+    "quantityLiters": 41.9,
+    "fatPercentage": 2.9,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 2132.76
+  },
+  {
+    "logId": "LOG-105",
+    "farmerId": "FARM-092",
+    "timestamp": "2026-09-06T12:37:18.768Z",
+    "quantityLiters": 44,
+    "fatPercentage": 5.6,
+    "snfPercentage": 10,
+    "calculatedPayout": 2145.11
+  },
+  {
+    "logId": "LOG-106",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T01:30:18.768Z",
+    "quantityLiters": 15.1,
+    "fatPercentage": 3,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1021.38
+  },
+  {
+    "logId": "LOG-107",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T12:50:18.768Z",
+    "quantityLiters": 32,
+    "fatPercentage": 2.7,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1329.98
+  },
+  {
+    "logId": "LOG-108",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 25.9,
+    "fatPercentage": 6.2,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1667.57
+  },
+  {
+    "logId": "LOG-109",
+    "farmerId": "FARM-027",
+    "timestamp": "2026-09-06T13:12:18.768Z",
+    "quantityLiters": 40.1,
+    "fatPercentage": 6.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 1551.3
+  },
+  {
+    "logId": "LOG-110",
+    "farmerId": "FARM-076",
+    "timestamp": "2026-09-06T02:26:18.768Z",
+    "quantityLiters": 31.2,
+    "fatPercentage": 7.7,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 2049.54
+  },
+  {
+    "logId": "LOG-111",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T13:13:18.768Z",
+    "quantityLiters": 14.8,
+    "fatPercentage": 3.7,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1230.48
+  },
+  {
+    "logId": "LOG-112",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T01:50:18.768Z",
+    "quantityLiters": 22.1,
+    "fatPercentage": 7.7,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 2200.2
+  },
+  {
+    "logId": "LOG-113",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T13:05:18.768Z",
+    "quantityLiters": 44.4,
+    "fatPercentage": 2.8,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 564.36
+  },
+  {
+    "logId": "LOG-114",
+    "farmerId": "FARM-017",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 32.8,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 546.44
+  },
+  {
+    "logId": "LOG-115",
+    "farmerId": "FARM-044",
+    "timestamp": "2026-09-06T12:43:18.768Z",
+    "quantityLiters": 39,
+    "fatPercentage": 2.5,
+    "snfPercentage": 10,
+    "calculatedPayout": 686.63
+  },
+  {
+    "logId": "LOG-116",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T01:36:18.768Z",
+    "quantityLiters": 20.4,
+    "fatPercentage": 2.8,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1830.9
+  },
+  {
+    "logId": "LOG-117",
+    "farmerId": "FARM-096",
+    "timestamp": "2026-09-06T13:28:18.768Z",
+    "quantityLiters": 15.3,
+    "fatPercentage": 5,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1018.45
+  },
+  {
+    "logId": "LOG-118",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T02:03:18.768Z",
+    "quantityLiters": 40.2,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 2095.85
+  },
+  {
+    "logId": "LOG-119",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T12:51:18.768Z",
+    "quantityLiters": 49.5,
+    "fatPercentage": 5.2,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1682.07
+  },
+  {
+    "logId": "LOG-120",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T02:05:18.768Z",
+    "quantityLiters": 6.7,
+    "fatPercentage": 2.6,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1734.26
+  },
+  {
+    "logId": "LOG-121",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T13:07:18.768Z",
+    "quantityLiters": 5.6,
+    "fatPercentage": 3,
+    "snfPercentage": 7,
+    "calculatedPayout": 2494.72
+  },
+  {
+    "logId": "LOG-122",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T01:57:18.768Z",
+    "quantityLiters": 41.5,
+    "fatPercentage": 2.9,
+    "snfPercentage": 7,
+    "calculatedPayout": 2250.6
+  },
+  {
+    "logId": "LOG-123",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 48.8,
+    "fatPercentage": 7.9,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 2084.38
+  },
+  {
+    "logId": "LOG-124",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T02:11:18.768Z",
+    "quantityLiters": 7.5,
+    "fatPercentage": 5.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 513.49
+  },
+  {
+    "logId": "LOG-125",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T12:52:18.768Z",
+    "quantityLiters": 20.9,
+    "fatPercentage": 3.7,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1942.73
+  },
+  {
+    "logId": "LOG-126",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 46.1,
+    "fatPercentage": 3.7,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1177.56
+  },
+  {
+    "logId": "LOG-127",
+    "farmerId": "FARM-060",
+    "timestamp": "2026-09-06T13:18:18.768Z",
+    "quantityLiters": 39.8,
+    "fatPercentage": 7.6,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1925.78
+  },
+  {
+    "logId": "LOG-128",
+    "farmerId": "FARM-058",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 31.2,
+    "fatPercentage": 3.9,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 546.67
+  },
+  {
+    "logId": "LOG-129",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T12:30:18.768Z",
+    "quantityLiters": 49.1,
+    "fatPercentage": 2.6,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 2203.23
+  },
+  {
+    "logId": "LOG-130",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T01:53:18.768Z",
+    "quantityLiters": 20.9,
+    "fatPercentage": 3.6,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2085.9
+  },
+  {
+    "logId": "LOG-131",
+    "farmerId": "FARM-003",
+    "timestamp": "2026-09-06T12:38:18.768Z",
+    "quantityLiters": 7.2,
+    "fatPercentage": 2.6,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 2252.08
+  },
+  {
+    "logId": "LOG-132",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T01:51:18.768Z",
+    "quantityLiters": 24.2,
+    "fatPercentage": 5.2,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1189.39
+  },
+  {
+    "logId": "LOG-133",
+    "farmerId": "FARM-014",
+    "timestamp": "2026-09-06T12:38:18.768Z",
+    "quantityLiters": 6.8,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 580.12
+  },
+  {
+    "logId": "LOG-134",
+    "farmerId": "FARM-063",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 41.6,
+    "fatPercentage": 5.6,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 676.62
+  },
+  {
+    "logId": "LOG-135",
+    "farmerId": "FARM-034",
+    "timestamp": "2026-09-06T12:35:18.768Z",
+    "quantityLiters": 49.2,
+    "fatPercentage": 3.1,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 1541.3
+  },
+  {
+    "logId": "LOG-136",
+    "farmerId": "FARM-044",
+    "timestamp": "2026-09-06T02:16:18.768Z",
+    "quantityLiters": 48.2,
+    "fatPercentage": 3,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1664.49
+  },
+  {
+    "logId": "LOG-137",
+    "farmerId": "FARM-010",
+    "timestamp": "2026-09-06T12:50:18.768Z",
+    "quantityLiters": 16.7,
+    "fatPercentage": 3.9,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 2250.83
+  },
+  {
+    "logId": "LOG-138",
+    "farmerId": "FARM-063",
+    "timestamp": "2026-09-06T02:25:18.768Z",
+    "quantityLiters": 27.8,
+    "fatPercentage": 2.9,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 825.09
+  },
+  {
+    "logId": "LOG-139",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T13:13:18.768Z",
+    "quantityLiters": 29.1,
+    "fatPercentage": 2.4,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1741.88
+  },
+  {
+    "logId": "LOG-140",
+    "farmerId": "FARM-053",
+    "timestamp": "2026-09-06T02:25:18.768Z",
+    "quantityLiters": 6.2,
+    "fatPercentage": 5.7,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 877.43
+  },
+  {
+    "logId": "LOG-141",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T13:23:18.768Z",
+    "quantityLiters": 37.7,
+    "fatPercentage": 5.8,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 1796.52
+  },
+  {
+    "logId": "LOG-142",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T01:53:18.768Z",
+    "quantityLiters": 31.2,
+    "fatPercentage": 5.2,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1134.56
+  },
+  {
+    "logId": "LOG-143",
+    "farmerId": "FARM-042",
+    "timestamp": "2026-09-06T12:34:18.768Z",
+    "quantityLiters": 22.4,
+    "fatPercentage": 3.7,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 690.36
+  },
+  {
+    "logId": "LOG-144",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T02:25:18.768Z",
+    "quantityLiters": 9.9,
+    "fatPercentage": 2.7,
+    "snfPercentage": 8,
+    "calculatedPayout": 1948.16
+  },
+  {
+    "logId": "LOG-145",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T13:26:18.768Z",
+    "quantityLiters": 47.5,
+    "fatPercentage": 6.7,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1981.16
+  },
+  {
+    "logId": "LOG-146",
+    "farmerId": "FARM-015",
+    "timestamp": "2026-09-06T01:37:18.768Z",
+    "quantityLiters": 8.9,
+    "fatPercentage": 7.8,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 809.15
+  },
+  {
+    "logId": "LOG-147",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T13:11:18.768Z",
+    "quantityLiters": 46.1,
+    "fatPercentage": 7.3,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 597.14
+  },
+  {
+    "logId": "LOG-148",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 23.8,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 2383.4
+  },
+  {
+    "logId": "LOG-149",
+    "farmerId": "FARM-003",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 45.5,
+    "fatPercentage": 2,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1963.13
+  },
+  {
+    "logId": "LOG-150",
+    "farmerId": "FARM-007",
+    "timestamp": "2026-09-06T01:41:18.768Z",
+    "quantityLiters": 20.9,
+    "fatPercentage": 7.4,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 2377.29
+  },
+  {
+    "logId": "LOG-151",
+    "farmerId": "FARM-016",
+    "timestamp": "2026-09-06T13:24:18.768Z",
+    "quantityLiters": 34,
+    "fatPercentage": 3.7,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 2192.62
+  },
+  {
+    "logId": "LOG-152",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T01:30:18.768Z",
+    "quantityLiters": 6.4,
+    "fatPercentage": 6.7,
+    "snfPercentage": 7,
+    "calculatedPayout": 2378.01
+  },
+  {
+    "logId": "LOG-153",
+    "farmerId": "FARM-018",
+    "timestamp": "2026-09-06T13:16:18.768Z",
+    "quantityLiters": 30.5,
+    "fatPercentage": 6.5,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1671.14
+  },
+  {
+    "logId": "LOG-154",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T02:25:18.768Z",
+    "quantityLiters": 33,
+    "fatPercentage": 2.2,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1352.05
+  },
+  {
+    "logId": "LOG-155",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 26.4,
+    "fatPercentage": 6.6,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 317.55
+  },
+  {
+    "logId": "LOG-156",
+    "farmerId": "FARM-018",
+    "timestamp": "2026-09-06T01:38:18.768Z",
+    "quantityLiters": 21.5,
+    "fatPercentage": 3.7,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 2056.14
+  },
+  {
+    "logId": "LOG-157",
+    "farmerId": "FARM-007",
+    "timestamp": "2026-09-06T12:59:18.768Z",
+    "quantityLiters": 41.4,
+    "fatPercentage": 7.9,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2022.08
+  },
+  {
+    "logId": "LOG-158",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T01:44:18.768Z",
+    "quantityLiters": 19.8,
+    "fatPercentage": 5,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1389.99
+  },
+  {
+    "logId": "LOG-159",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T12:34:18.768Z",
+    "quantityLiters": 13.2,
+    "fatPercentage": 6.2,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 1635.66
+  },
+  {
+    "logId": "LOG-160",
+    "farmerId": "FARM-010",
+    "timestamp": "2026-09-06T01:34:18.768Z",
+    "quantityLiters": 23,
+    "fatPercentage": 2.7,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 2195.21
+  },
+  {
+    "logId": "LOG-161",
+    "farmerId": "FARM-086",
+    "timestamp": "2026-09-06T13:16:18.768Z",
+    "quantityLiters": 34.5,
+    "fatPercentage": 7.2,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 301.8
+  },
+  {
+    "logId": "LOG-162",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T01:49:18.768Z",
+    "quantityLiters": 22,
+    "fatPercentage": 5.1,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 2316.73
+  },
+  {
+    "logId": "LOG-163",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T13:04:18.768Z",
+    "quantityLiters": 22.8,
+    "fatPercentage": 6.6,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2198.84
+  },
+  {
+    "logId": "LOG-164",
+    "farmerId": "FARM-060",
+    "timestamp": "2026-09-06T01:47:18.768Z",
+    "quantityLiters": 18.4,
+    "fatPercentage": 7.6,
+    "snfPercentage": 7,
+    "calculatedPayout": 479.92
+  },
+  {
+    "logId": "LOG-165",
+    "farmerId": "FARM-079",
+    "timestamp": "2026-09-06T12:59:18.768Z",
+    "quantityLiters": 27.5,
+    "fatPercentage": 7.9,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 404.28
+  },
+  {
+    "logId": "LOG-166",
+    "farmerId": "FARM-092",
+    "timestamp": "2026-09-06T01:48:18.768Z",
+    "quantityLiters": 25.5,
+    "fatPercentage": 7.1,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 2160.57
+  },
+  {
+    "logId": "LOG-167",
+    "farmerId": "FARM-007",
+    "timestamp": "2026-09-06T12:53:18.768Z",
+    "quantityLiters": 8.9,
+    "fatPercentage": 7.4,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 1488.39
+  },
+  {
+    "logId": "LOG-168",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T01:59:18.768Z",
+    "quantityLiters": 32.7,
+    "fatPercentage": 2.5,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1364.31
+  },
+  {
+    "logId": "LOG-169",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T12:43:18.768Z",
+    "quantityLiters": 21.6,
+    "fatPercentage": 3.9,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1825.78
+  },
+  {
+    "logId": "LOG-170",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T02:28:18.768Z",
+    "quantityLiters": 14.9,
+    "fatPercentage": 2.9,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 596.68
+  },
+  {
+    "logId": "LOG-171",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T12:57:18.768Z",
+    "quantityLiters": 12.4,
+    "fatPercentage": 4,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1244.59
+  },
+  {
+    "logId": "LOG-172",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T02:09:18.768Z",
+    "quantityLiters": 42,
+    "fatPercentage": 7.2,
+    "snfPercentage": 10,
+    "calculatedPayout": 478.48
+  },
+  {
+    "logId": "LOG-173",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T12:31:18.768Z",
+    "quantityLiters": 23.5,
+    "fatPercentage": 2.2,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1410.19
+  },
+  {
+    "logId": "LOG-174",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T02:13:18.768Z",
+    "quantityLiters": 42.3,
+    "fatPercentage": 2.1,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1762.84
+  },
+  {
+    "logId": "LOG-175",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T13:02:18.768Z",
+    "quantityLiters": 20.1,
+    "fatPercentage": 6.3,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 709.43
+  },
+  {
+    "logId": "LOG-176",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T02:23:18.768Z",
+    "quantityLiters": 9.5,
+    "fatPercentage": 6.8,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 462.95
+  },
+  {
+    "logId": "LOG-177",
+    "farmerId": "FARM-038",
+    "timestamp": "2026-09-06T13:01:18.768Z",
+    "quantityLiters": 9,
+    "fatPercentage": 3.5,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2065.21
+  },
+  {
+    "logId": "LOG-178",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T01:59:18.768Z",
+    "quantityLiters": 14.7,
+    "fatPercentage": 3.5,
+    "snfPercentage": 8,
+    "calculatedPayout": 1656.71
+  },
+  {
+    "logId": "LOG-179",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T12:38:18.768Z",
+    "quantityLiters": 19.9,
+    "fatPercentage": 2.1,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 382.02
+  },
+  {
+    "logId": "LOG-180",
+    "farmerId": "FARM-007",
+    "timestamp": "2026-09-06T02:22:18.768Z",
+    "quantityLiters": 42.6,
+    "fatPercentage": 2.4,
+    "snfPercentage": 8,
+    "calculatedPayout": 1636.07
+  },
+  {
+    "logId": "LOG-181",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T12:57:18.768Z",
+    "quantityLiters": 17.3,
+    "fatPercentage": 2.1,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 276.68
+  },
+  {
+    "logId": "LOG-182",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T01:31:18.768Z",
+    "quantityLiters": 10.1,
+    "fatPercentage": 7.2,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 2379.18
+  },
+  {
+    "logId": "LOG-183",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T12:48:18.768Z",
+    "quantityLiters": 41.3,
+    "fatPercentage": 7,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 441.83
+  },
+  {
+    "logId": "LOG-184",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T01:30:18.768Z",
+    "quantityLiters": 7.9,
+    "fatPercentage": 2.6,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1279.27
+  },
+  {
+    "logId": "LOG-185",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T12:40:18.768Z",
+    "quantityLiters": 19.8,
+    "fatPercentage": 7,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 2366.41
+  },
+  {
+    "logId": "LOG-186",
+    "farmerId": "FARM-033",
+    "timestamp": "2026-09-06T02:08:18.768Z",
+    "quantityLiters": 35.1,
+    "fatPercentage": 2.1,
+    "snfPercentage": 10,
+    "calculatedPayout": 1440.59
+  },
+  {
+    "logId": "LOG-187",
+    "farmerId": "FARM-064",
+    "timestamp": "2026-09-06T12:41:18.768Z",
+    "quantityLiters": 14.6,
+    "fatPercentage": 2.2,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 539.25
+  },
+  {
+    "logId": "LOG-188",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T01:45:18.768Z",
+    "quantityLiters": 6.7,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1108.59
+  },
+  {
+    "logId": "LOG-189",
+    "farmerId": "FARM-066",
+    "timestamp": "2026-09-06T12:57:18.768Z",
+    "quantityLiters": 17.3,
+    "fatPercentage": 6.7,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1562.48
+  },
+  {
+    "logId": "LOG-190",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T02:09:18.768Z",
+    "quantityLiters": 11.7,
+    "fatPercentage": 6.2,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 743.26
+  },
+  {
+    "logId": "LOG-191",
+    "farmerId": "FARM-096",
+    "timestamp": "2026-09-06T12:53:18.768Z",
+    "quantityLiters": 39,
+    "fatPercentage": 6.1,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 609.54
+  },
+  {
+    "logId": "LOG-192",
+    "farmerId": "FARM-044",
+    "timestamp": "2026-09-06T01:53:18.768Z",
+    "quantityLiters": 40.9,
+    "fatPercentage": 5.9,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 532.62
+  },
+  {
+    "logId": "LOG-193",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T12:32:18.768Z",
+    "quantityLiters": 22.1,
+    "fatPercentage": 4.1,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1346.3
+  },
+  {
+    "logId": "LOG-194",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T01:45:18.768Z",
+    "quantityLiters": 43.7,
+    "fatPercentage": 5.3,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 2378.47
+  },
+  {
+    "logId": "LOG-195",
+    "farmerId": "FARM-014",
+    "timestamp": "2026-09-06T13:20:18.768Z",
+    "quantityLiters": 44.7,
+    "fatPercentage": 8,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1944.03
+  },
+  {
+    "logId": "LOG-196",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T01:37:18.768Z",
+    "quantityLiters": 48.9,
+    "fatPercentage": 4.3,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2417.66
+  },
+  {
+    "logId": "LOG-197",
+    "farmerId": "FARM-024",
+    "timestamp": "2026-09-06T12:35:18.768Z",
+    "quantityLiters": 29.8,
+    "fatPercentage": 3.7,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 302.11
+  },
+  {
+    "logId": "LOG-198",
+    "farmerId": "FARM-066",
+    "timestamp": "2026-09-06T01:46:18.768Z",
+    "quantityLiters": 46.1,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9,
+    "calculatedPayout": 856.99
+  },
+  {
+    "logId": "LOG-199",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T13:07:18.768Z",
+    "quantityLiters": 19,
+    "fatPercentage": 4.2,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 1659.2
+  },
+  {
+    "logId": "LOG-200",
+    "farmerId": "FARM-097",
+    "timestamp": "2026-09-06T01:30:18.768Z",
+    "quantityLiters": 15,
+    "fatPercentage": 2.2,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 884.34
+  },
+  {
+    "logId": "LOG-201",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T13:01:18.769Z",
+    "quantityLiters": 14.6,
+    "fatPercentage": 7.4,
+    "snfPercentage": 7,
+    "calculatedPayout": 2184.51
+  },
+  {
+    "logId": "LOG-202",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 23.3,
+    "fatPercentage": 2.7,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1694.61
+  },
+  {
+    "logId": "LOG-203",
+    "farmerId": "FARM-001",
+    "timestamp": "2026-09-06T13:11:18.769Z",
+    "quantityLiters": 38.8,
+    "fatPercentage": 2.3,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 998.89
+  },
+  {
+    "logId": "LOG-204",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T02:07:18.769Z",
+    "quantityLiters": 41.6,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 694.52
+  },
+  {
+    "logId": "LOG-205",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T12:40:18.769Z",
+    "quantityLiters": 15.2,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 1457.14
+  },
+  {
+    "logId": "LOG-206",
+    "farmerId": "FARM-054",
+    "timestamp": "2026-09-06T02:04:18.769Z",
+    "quantityLiters": 23.1,
+    "fatPercentage": 7.4,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 1808.98
+  },
+  {
+    "logId": "LOG-207",
+    "farmerId": "FARM-020",
+    "timestamp": "2026-09-06T12:36:18.769Z",
+    "quantityLiters": 7.2,
+    "fatPercentage": 7.3,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 2135.1
+  },
+  {
+    "logId": "LOG-208",
+    "farmerId": "FARM-060",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 25.6,
+    "fatPercentage": 5.8,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 2017.53
+  },
+  {
+    "logId": "LOG-209",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:05:18.769Z",
+    "quantityLiters": 5.9,
+    "fatPercentage": 2.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 1621.55
+  },
+  {
+    "logId": "LOG-210",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 19.2,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1281.95
+  },
+  {
+    "logId": "LOG-211",
+    "farmerId": "FARM-002",
+    "timestamp": "2026-09-06T12:42:18.769Z",
+    "quantityLiters": 29.6,
+    "fatPercentage": 3.6,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1189.52
+  },
+  {
+    "logId": "LOG-212",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 16.6,
+    "fatPercentage": 3.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 516.42
+  },
+  {
+    "logId": "LOG-213",
+    "farmerId": "FARM-045",
+    "timestamp": "2026-09-06T13:03:18.769Z",
+    "quantityLiters": 24.6,
+    "fatPercentage": 4.5,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1344.26
+  },
+  {
+    "logId": "LOG-214",
+    "farmerId": "FARM-081",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 49.6,
+    "fatPercentage": 3.9,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1655.75
+  },
+  {
+    "logId": "LOG-215",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 40.8,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7,
+    "calculatedPayout": 1789.03
+  },
+  {
+    "logId": "LOG-216",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T02:20:18.769Z",
+    "quantityLiters": 8.8,
+    "fatPercentage": 7.7,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 723.48
+  },
+  {
+    "logId": "LOG-217",
+    "farmerId": "FARM-064",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 50,
+    "fatPercentage": 2.5,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 1979.13
+  },
+  {
+    "logId": "LOG-218",
+    "farmerId": "FARM-008",
+    "timestamp": "2026-09-06T02:26:18.769Z",
+    "quantityLiters": 27,
+    "fatPercentage": 6.6,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 1800.42
+  },
+  {
+    "logId": "LOG-219",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T13:22:18.769Z",
+    "quantityLiters": 16.2,
+    "fatPercentage": 4.2,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1093.26
+  },
+  {
+    "logId": "LOG-220",
+    "farmerId": "FARM-014",
+    "timestamp": "2026-09-06T02:07:18.769Z",
+    "quantityLiters": 49.7,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 1125.54
+  },
+  {
+    "logId": "LOG-221",
+    "farmerId": "FARM-008",
+    "timestamp": "2026-09-06T13:02:18.769Z",
+    "quantityLiters": 38.5,
+    "fatPercentage": 3.4,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 1194.92
+  },
+  {
+    "logId": "LOG-222",
+    "farmerId": "FARM-061",
+    "timestamp": "2026-09-06T02:22:18.769Z",
+    "quantityLiters": 43.8,
+    "fatPercentage": 6.6,
+    "snfPercentage": 10,
+    "calculatedPayout": 1819.51
+  },
+  {
+    "logId": "LOG-223",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T12:39:18.769Z",
+    "quantityLiters": 17.7,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 748.23
+  },
+  {
+    "logId": "LOG-224",
+    "farmerId": "FARM-097",
+    "timestamp": "2026-09-06T02:27:18.769Z",
+    "quantityLiters": 30.5,
+    "fatPercentage": 6.1,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 293.4
+  },
+  {
+    "logId": "LOG-225",
+    "farmerId": "FARM-080",
+    "timestamp": "2026-09-06T13:12:18.769Z",
+    "quantityLiters": 47.9,
+    "fatPercentage": 7.7,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1316.08
+  },
+  {
+    "logId": "LOG-226",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 30.3,
+    "fatPercentage": 8,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 836.94
+  },
+  {
+    "logId": "LOG-227",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T13:15:18.769Z",
+    "quantityLiters": 34.3,
+    "fatPercentage": 4,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1626.18
+  },
+  {
+    "logId": "LOG-228",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T02:27:18.769Z",
+    "quantityLiters": 39.8,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1816.53
+  },
+  {
+    "logId": "LOG-229",
+    "farmerId": "FARM-004",
+    "timestamp": "2026-09-06T12:33:18.769Z",
+    "quantityLiters": 37.6,
+    "fatPercentage": 4.2,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 1458.95
+  },
+  {
+    "logId": "LOG-230",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T02:02:18.769Z",
+    "quantityLiters": 22.4,
+    "fatPercentage": 6.3,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1391.07
+  },
+  {
+    "logId": "LOG-231",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T12:47:18.769Z",
+    "quantityLiters": 36,
+    "fatPercentage": 6.4,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 1442.12
+  },
+  {
+    "logId": "LOG-232",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T01:50:18.769Z",
+    "quantityLiters": 26.3,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 490.38
+  },
+  {
+    "logId": "LOG-233",
+    "farmerId": "FARM-044",
+    "timestamp": "2026-09-06T12:45:18.769Z",
+    "quantityLiters": 9.3,
+    "fatPercentage": 2.4,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2493.1
+  },
+  {
+    "logId": "LOG-234",
+    "farmerId": "FARM-081",
+    "timestamp": "2026-09-06T02:04:18.769Z",
+    "quantityLiters": 5.3,
+    "fatPercentage": 5.4,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1245.91
+  },
+  {
+    "logId": "LOG-235",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T13:25:18.769Z",
+    "quantityLiters": 48,
+    "fatPercentage": 7.3,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 941.25
+  },
+  {
+    "logId": "LOG-236",
+    "farmerId": "FARM-026",
+    "timestamp": "2026-09-06T01:35:18.769Z",
+    "quantityLiters": 18.2,
+    "fatPercentage": 3.1,
+    "snfPercentage": 8,
+    "calculatedPayout": 903.24
+  },
+  {
+    "logId": "LOG-237",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T12:38:18.769Z",
+    "quantityLiters": 11.8,
+    "fatPercentage": 6.9,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1186.45
+  },
+  {
+    "logId": "LOG-238",
+    "farmerId": "FARM-092",
+    "timestamp": "2026-09-06T02:25:18.769Z",
+    "quantityLiters": 28.6,
+    "fatPercentage": 3.6,
+    "snfPercentage": 7,
+    "calculatedPayout": 1820
+  },
+  {
+    "logId": "LOG-239",
+    "farmerId": "FARM-017",
+    "timestamp": "2026-09-06T13:09:18.769Z",
+    "quantityLiters": 15.5,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 876.65
+  },
+  {
+    "logId": "LOG-240",
+    "farmerId": "FARM-065",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 14.7,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1925.88
+  },
+  {
+    "logId": "LOG-241",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T13:04:18.769Z",
+    "quantityLiters": 36.1,
+    "fatPercentage": 5.8,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 704.76
+  },
+  {
+    "logId": "LOG-242",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T02:07:18.769Z",
+    "quantityLiters": 14.9,
+    "fatPercentage": 3.7,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1845.39
+  },
+  {
+    "logId": "LOG-243",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T12:53:18.769Z",
+    "quantityLiters": 11.5,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1497.78
+  },
+  {
+    "logId": "LOG-244",
+    "farmerId": "FARM-096",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 20.7,
+    "fatPercentage": 2.1,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1152.33
+  },
+  {
+    "logId": "LOG-245",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T12:59:18.769Z",
+    "quantityLiters": 33.3,
+    "fatPercentage": 5.7,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 1365.15
+  },
+  {
+    "logId": "LOG-246",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 35.6,
+    "fatPercentage": 3.8,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 2192.17
+  },
+  {
+    "logId": "LOG-247",
+    "farmerId": "FARM-054",
+    "timestamp": "2026-09-06T12:36:18.769Z",
+    "quantityLiters": 12.9,
+    "fatPercentage": 2.4,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 831.11
+  },
+  {
+    "logId": "LOG-248",
+    "farmerId": "FARM-005",
+    "timestamp": "2026-09-06T02:29:18.769Z",
+    "quantityLiters": 28.3,
+    "fatPercentage": 7.1,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 2063.26
+  },
+  {
+    "logId": "LOG-249",
+    "farmerId": "FARM-007",
+    "timestamp": "2026-09-06T13:07:18.769Z",
+    "quantityLiters": 42.7,
+    "fatPercentage": 4.3,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1682.55
+  },
+  {
+    "logId": "LOG-250",
+    "farmerId": "FARM-042",
+    "timestamp": "2026-09-06T01:36:18.769Z",
+    "quantityLiters": 8.3,
+    "fatPercentage": 2.5,
+    "snfPercentage": 8,
+    "calculatedPayout": 1427.76
+  },
+  {
+    "logId": "LOG-251",
+    "farmerId": "FARM-072",
+    "timestamp": "2026-09-06T13:09:18.769Z",
+    "quantityLiters": 28.8,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 1873.2
+  },
+  {
+    "logId": "LOG-252",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 38.3,
+    "fatPercentage": 3.4,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1326.56
+  },
+  {
+    "logId": "LOG-253",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T12:33:18.769Z",
+    "quantityLiters": 10.8,
+    "fatPercentage": 6.4,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1942.15
+  },
+  {
+    "logId": "LOG-254",
+    "farmerId": "FARM-016",
+    "timestamp": "2026-09-06T01:50:18.769Z",
+    "quantityLiters": 49.9,
+    "fatPercentage": 5.3,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 2008.53
+  },
+  {
+    "logId": "LOG-255",
+    "farmerId": "FARM-089",
+    "timestamp": "2026-09-06T13:10:18.769Z",
+    "quantityLiters": 46.8,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1461.71
+  },
+  {
+    "logId": "LOG-256",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T02:22:18.769Z",
+    "quantityLiters": 7.4,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1885.26
+  },
+  {
+    "logId": "LOG-257",
+    "farmerId": "FARM-005",
+    "timestamp": "2026-09-06T12:42:18.769Z",
+    "quantityLiters": 27.8,
+    "fatPercentage": 3.4,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 2325.42
+  },
+  {
+    "logId": "LOG-258",
+    "farmerId": "FARM-096",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 26.1,
+    "fatPercentage": 2.2,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2099.05
+  },
+  {
+    "logId": "LOG-259",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T13:25:18.769Z",
+    "quantityLiters": 42.5,
+    "fatPercentage": 5.7,
+    "snfPercentage": 9,
+    "calculatedPayout": 1129.53
+  },
+  {
+    "logId": "LOG-260",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 11.4,
+    "fatPercentage": 3.8,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1458.02
+  },
+  {
+    "logId": "LOG-261",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T13:28:18.769Z",
+    "quantityLiters": 34.4,
+    "fatPercentage": 7.1,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2195.5
+  },
+  {
+    "logId": "LOG-262",
+    "farmerId": "FARM-016",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 20.7,
+    "fatPercentage": 5.5,
+    "snfPercentage": 9,
+    "calculatedPayout": 2023.72
+  },
+  {
+    "logId": "LOG-263",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T13:05:18.769Z",
+    "quantityLiters": 8.8,
+    "fatPercentage": 4.3,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1734.84
+  },
+  {
+    "logId": "LOG-264",
+    "farmerId": "FARM-022",
+    "timestamp": "2026-09-06T01:31:18.769Z",
+    "quantityLiters": 33.7,
+    "fatPercentage": 2.2,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1798.77
+  },
+  {
+    "logId": "LOG-265",
+    "farmerId": "FARM-061",
+    "timestamp": "2026-09-06T12:36:18.769Z",
+    "quantityLiters": 46.3,
+    "fatPercentage": 4.4,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 2433.63
+  },
+  {
+    "logId": "LOG-266",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T02:27:18.769Z",
+    "quantityLiters": 43.8,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 1630.22
+  },
+  {
+    "logId": "LOG-267",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T12:41:18.769Z",
+    "quantityLiters": 42.8,
+    "fatPercentage": 6.5,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1963.93
+  },
+  {
+    "logId": "LOG-268",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 15.2,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1677.8
+  },
+  {
+    "logId": "LOG-269",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T12:41:18.769Z",
+    "quantityLiters": 25.1,
+    "fatPercentage": 5.6,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 267.52
+  },
+  {
+    "logId": "LOG-270",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 19.5,
+    "fatPercentage": 6.3,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1265.29
+  },
+  {
+    "logId": "LOG-271",
+    "farmerId": "FARM-056",
+    "timestamp": "2026-09-06T12:38:18.769Z",
+    "quantityLiters": 14.1,
+    "fatPercentage": 4.4,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 583.68
+  },
+  {
+    "logId": "LOG-272",
+    "farmerId": "FARM-072",
+    "timestamp": "2026-09-06T02:20:18.769Z",
+    "quantityLiters": 41.7,
+    "fatPercentage": 6,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 697.55
+  },
+  {
+    "logId": "LOG-273",
+    "farmerId": "FARM-015",
+    "timestamp": "2026-09-06T12:44:18.769Z",
+    "quantityLiters": 5.8,
+    "fatPercentage": 3.1,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1739.98
+  },
+  {
+    "logId": "LOG-274",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T02:14:18.769Z",
+    "quantityLiters": 27.2,
+    "fatPercentage": 5.7,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 1454.29
+  },
+  {
+    "logId": "LOG-275",
+    "farmerId": "FARM-097",
+    "timestamp": "2026-09-06T12:35:18.769Z",
+    "quantityLiters": 16.8,
+    "fatPercentage": 2.5,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1163.62
+  },
+  {
+    "logId": "LOG-276",
+    "farmerId": "FARM-074",
+    "timestamp": "2026-09-06T01:39:18.769Z",
+    "quantityLiters": 33.9,
+    "fatPercentage": 3.7,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 2382.15
+  },
+  {
+    "logId": "LOG-277",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:45:18.769Z",
+    "quantityLiters": 29,
+    "fatPercentage": 5.9,
+    "snfPercentage": 7,
+    "calculatedPayout": 817.59
+  },
+  {
+    "logId": "LOG-278",
+    "farmerId": "FARM-056",
+    "timestamp": "2026-09-06T01:54:18.769Z",
+    "quantityLiters": 9.8,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 447.88
+  },
+  {
+    "logId": "LOG-279",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 13.2,
+    "fatPercentage": 2.2,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 1668.62
+  },
+  {
+    "logId": "LOG-280",
+    "farmerId": "FARM-002",
+    "timestamp": "2026-09-06T02:17:18.769Z",
+    "quantityLiters": 44.4,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1861.1
+  },
+  {
+    "logId": "LOG-281",
+    "farmerId": "FARM-022",
+    "timestamp": "2026-09-06T13:27:18.769Z",
+    "quantityLiters": 9.1,
+    "fatPercentage": 5.6,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 2275.56
+  },
+  {
+    "logId": "LOG-282",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 19.5,
+    "fatPercentage": 7.4,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 881.3
+  },
+  {
+    "logId": "LOG-283",
+    "farmerId": "FARM-034",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 7.9,
+    "fatPercentage": 5.7,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 2340.19
+  },
+  {
+    "logId": "LOG-284",
+    "farmerId": "FARM-050",
+    "timestamp": "2026-09-06T01:37:18.769Z",
+    "quantityLiters": 34.5,
+    "fatPercentage": 5.2,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 354.07
+  },
+  {
+    "logId": "LOG-285",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T12:54:18.769Z",
+    "quantityLiters": 14.7,
+    "fatPercentage": 3,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 331.3
+  },
+  {
+    "logId": "LOG-286",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 19.3,
+    "fatPercentage": 2.4,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 1855.11
+  },
+  {
+    "logId": "LOG-287",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T12:51:18.769Z",
+    "quantityLiters": 15.9,
+    "fatPercentage": 5.4,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1324.94
+  },
+  {
+    "logId": "LOG-288",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T01:59:18.769Z",
+    "quantityLiters": 23.9,
+    "fatPercentage": 6.1,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 629.46
+  },
+  {
+    "logId": "LOG-289",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T13:19:18.769Z",
+    "quantityLiters": 5.6,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 889.84
+  },
+  {
+    "logId": "LOG-290",
+    "farmerId": "FARM-018",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 21.7,
+    "fatPercentage": 6.1,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 971.25
+  },
+  {
+    "logId": "LOG-291",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T12:49:18.769Z",
+    "quantityLiters": 22.5,
+    "fatPercentage": 7.3,
+    "snfPercentage": 9,
+    "calculatedPayout": 1958.07
+  },
+  {
+    "logId": "LOG-292",
+    "farmerId": "FARM-056",
+    "timestamp": "2026-09-06T02:21:18.769Z",
+    "quantityLiters": 18.4,
+    "fatPercentage": 6.4,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 2380.16
+  },
+  {
+    "logId": "LOG-293",
+    "farmerId": "FARM-089",
+    "timestamp": "2026-09-06T12:42:18.769Z",
+    "quantityLiters": 42.7,
+    "fatPercentage": 6.2,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 766.76
+  },
+  {
+    "logId": "LOG-294",
+    "farmerId": "FARM-026",
+    "timestamp": "2026-09-06T01:31:18.769Z",
+    "quantityLiters": 45.4,
+    "fatPercentage": 7.1,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 511.06
+  },
+  {
+    "logId": "LOG-295",
+    "farmerId": "FARM-063",
+    "timestamp": "2026-09-06T13:07:18.769Z",
+    "quantityLiters": 5.1,
+    "fatPercentage": 2.5,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1505.11
+  },
+  {
+    "logId": "LOG-296",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T01:36:18.769Z",
+    "quantityLiters": 8,
+    "fatPercentage": 7.4,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 1913.98
+  },
+  {
+    "logId": "LOG-297",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T12:52:18.769Z",
+    "quantityLiters": 35.1,
+    "fatPercentage": 6.5,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 995.24
+  },
+  {
+    "logId": "LOG-298",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T01:30:18.769Z",
+    "quantityLiters": 5.1,
+    "fatPercentage": 6.9,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2401.69
+  },
+  {
+    "logId": "LOG-299",
+    "farmerId": "FARM-042",
+    "timestamp": "2026-09-06T13:23:18.769Z",
+    "quantityLiters": 37.4,
+    "fatPercentage": 6.1,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2129.45
+  },
+  {
+    "logId": "LOG-300",
+    "farmerId": "FARM-066",
+    "timestamp": "2026-09-06T02:01:18.769Z",
+    "quantityLiters": 47,
+    "fatPercentage": 6.5,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 445.86
+  },
+  {
+    "logId": "LOG-301",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T13:12:18.769Z",
+    "quantityLiters": 27.8,
+    "fatPercentage": 4,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1183.1
+  },
+  {
+    "logId": "LOG-302",
+    "farmerId": "FARM-026",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 17.1,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9,
+    "calculatedPayout": 2233.22
+  },
+  {
+    "logId": "LOG-303",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T13:10:18.769Z",
+    "quantityLiters": 39.6,
+    "fatPercentage": 6.9,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 700.98
+  },
+  {
+    "logId": "LOG-304",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T02:24:18.769Z",
+    "quantityLiters": 26.2,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1682.47
+  },
+  {
+    "logId": "LOG-305",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:52:18.769Z",
+    "quantityLiters": 47.2,
+    "fatPercentage": 4.2,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 2033.2
+  },
+  {
+    "logId": "LOG-306",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T01:52:18.769Z",
+    "quantityLiters": 8.5,
+    "fatPercentage": 3.8,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 657.55
+  },
+  {
+    "logId": "LOG-307",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T13:07:18.769Z",
+    "quantityLiters": 17.8,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9,
+    "calculatedPayout": 536.03
+  },
+  {
+    "logId": "LOG-308",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 38.5,
+    "fatPercentage": 2.1,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1477.38
+  },
+  {
+    "logId": "LOG-309",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 36.4,
+    "fatPercentage": 6.3,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1806.69
+  },
+  {
+    "logId": "LOG-310",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 24.4,
+    "fatPercentage": 3,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1808.17
+  },
+  {
+    "logId": "LOG-311",
+    "farmerId": "FARM-026",
+    "timestamp": "2026-09-06T13:09:18.769Z",
+    "quantityLiters": 41.9,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2190.64
+  },
+  {
+    "logId": "LOG-312",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T02:26:18.769Z",
+    "quantityLiters": 49.1,
+    "fatPercentage": 3,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 1807.17
+  },
+  {
+    "logId": "LOG-313",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T13:02:18.769Z",
+    "quantityLiters": 34,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1147
+  },
+  {
+    "logId": "LOG-314",
+    "farmerId": "FARM-070",
+    "timestamp": "2026-09-06T01:47:18.769Z",
+    "quantityLiters": 28.6,
+    "fatPercentage": 7.8,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 2283.79
+  },
+  {
+    "logId": "LOG-315",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T12:31:18.769Z",
+    "quantityLiters": 15.1,
+    "fatPercentage": 4.3,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1521.98
+  },
+  {
+    "logId": "LOG-316",
+    "farmerId": "FARM-051",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 5.8,
+    "fatPercentage": 5,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 914.24
+  },
+  {
+    "logId": "LOG-317",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T12:55:18.769Z",
+    "quantityLiters": 35.8,
+    "fatPercentage": 3,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 386.56
+  },
+  {
+    "logId": "LOG-318",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T02:27:18.769Z",
+    "quantityLiters": 11.9,
+    "fatPercentage": 4.8,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1255.58
+  },
+  {
+    "logId": "LOG-319",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T12:59:18.769Z",
+    "quantityLiters": 48,
+    "fatPercentage": 2.1,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 1947.26
+  },
+  {
+    "logId": "LOG-320",
+    "farmerId": "FARM-093",
+    "timestamp": "2026-09-06T01:39:18.769Z",
+    "quantityLiters": 23.3,
+    "fatPercentage": 5.6,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2462.57
+  },
+  {
+    "logId": "LOG-321",
+    "farmerId": "FARM-027",
+    "timestamp": "2026-09-06T13:03:18.769Z",
+    "quantityLiters": 15.9,
+    "fatPercentage": 4.5,
+    "snfPercentage": 8,
+    "calculatedPayout": 525.71
+  },
+  {
+    "logId": "LOG-322",
+    "farmerId": "FARM-053",
+    "timestamp": "2026-09-06T02:25:18.769Z",
+    "quantityLiters": 42.5,
+    "fatPercentage": 3,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 740.68
+  },
+  {
+    "logId": "LOG-323",
+    "farmerId": "FARM-038",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 48.2,
+    "fatPercentage": 3.5,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 339.06
+  },
+  {
+    "logId": "LOG-324",
+    "farmerId": "FARM-022",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 35.1,
+    "fatPercentage": 2.3,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1827.09
+  },
+  {
+    "logId": "LOG-325",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T12:35:18.769Z",
+    "quantityLiters": 12.1,
+    "fatPercentage": 6.6,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 795.38
+  },
+  {
+    "logId": "LOG-326",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 42,
+    "fatPercentage": 6.7,
+    "snfPercentage": 10,
+    "calculatedPayout": 361.24
+  },
+  {
+    "logId": "LOG-327",
+    "farmerId": "FARM-031",
+    "timestamp": "2026-09-06T13:15:18.769Z",
+    "quantityLiters": 39.3,
+    "fatPercentage": 7,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1197.35
+  },
+  {
+    "logId": "LOG-328",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T01:51:18.769Z",
+    "quantityLiters": 13.4,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 2066.26
+  },
+  {
+    "logId": "LOG-329",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T12:56:18.769Z",
+    "quantityLiters": 36.1,
+    "fatPercentage": 2.3,
+    "snfPercentage": 9,
+    "calculatedPayout": 619.77
+  },
+  {
+    "logId": "LOG-330",
+    "farmerId": "FARM-018",
+    "timestamp": "2026-09-06T01:47:18.769Z",
+    "quantityLiters": 30.5,
+    "fatPercentage": 6.7,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1029.55
+  },
+  {
+    "logId": "LOG-331",
+    "farmerId": "FARM-073",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 23.3,
+    "fatPercentage": 5.9,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 634.89
+  },
+  {
+    "logId": "LOG-332",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T01:57:18.769Z",
+    "quantityLiters": 20.3,
+    "fatPercentage": 7.8,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 324.29
+  },
+  {
+    "logId": "LOG-333",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:53:18.769Z",
+    "quantityLiters": 7.6,
+    "fatPercentage": 7.9,
+    "snfPercentage": 9,
+    "calculatedPayout": 675.33
+  },
+  {
+    "logId": "LOG-334",
+    "farmerId": "FARM-080",
+    "timestamp": "2026-09-06T01:47:18.769Z",
+    "quantityLiters": 38,
+    "fatPercentage": 3.1,
+    "snfPercentage": 10,
+    "calculatedPayout": 260.28
+  },
+  {
+    "logId": "LOG-335",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T12:31:18.769Z",
+    "quantityLiters": 29.7,
+    "fatPercentage": 3.7,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 1111.96
+  },
+  {
+    "logId": "LOG-336",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T02:13:18.769Z",
+    "quantityLiters": 30.2,
+    "fatPercentage": 4.8,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2208.9
+  },
+  {
+    "logId": "LOG-337",
+    "farmerId": "FARM-018",
+    "timestamp": "2026-09-06T13:08:18.769Z",
+    "quantityLiters": 39.7,
+    "fatPercentage": 2.3,
+    "snfPercentage": 7,
+    "calculatedPayout": 445.43
+  },
+  {
+    "logId": "LOG-338",
+    "farmerId": "FARM-033",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 22.2,
+    "fatPercentage": 5.6,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 910.09
+  },
+  {
+    "logId": "LOG-339",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T13:26:18.769Z",
+    "quantityLiters": 46.9,
+    "fatPercentage": 2.3,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1833.72
+  },
+  {
+    "logId": "LOG-340",
+    "farmerId": "FARM-027",
+    "timestamp": "2026-09-06T02:18:18.769Z",
+    "quantityLiters": 23.9,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 432.12
+  },
+  {
+    "logId": "LOG-341",
+    "farmerId": "FARM-054",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 12.6,
+    "fatPercentage": 6.6,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 2150.47
+  },
+  {
+    "logId": "LOG-342",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T01:56:18.769Z",
+    "quantityLiters": 6.6,
+    "fatPercentage": 4.1,
+    "snfPercentage": 7,
+    "calculatedPayout": 1932.63
+  },
+  {
+    "logId": "LOG-343",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T13:27:18.769Z",
+    "quantityLiters": 48.1,
+    "fatPercentage": 5.6,
+    "snfPercentage": 10,
+    "calculatedPayout": 1211.34
+  },
+  {
+    "logId": "LOG-344",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T02:06:18.769Z",
+    "quantityLiters": 26,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 646.99
+  },
+  {
+    "logId": "LOG-345",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T12:46:18.769Z",
+    "quantityLiters": 34.6,
+    "fatPercentage": 3.3,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 527.47
+  },
+  {
+    "logId": "LOG-346",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 23.1,
+    "fatPercentage": 3.2,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 787.43
+  },
+  {
+    "logId": "LOG-347",
+    "farmerId": "FARM-025",
+    "timestamp": "2026-09-06T12:40:18.769Z",
+    "quantityLiters": 36.2,
+    "fatPercentage": 3.2,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1302.85
+  },
+  {
+    "logId": "LOG-348",
+    "farmerId": "FARM-080",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 24.2,
+    "fatPercentage": 2.5,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 2287.18
+  },
+  {
+    "logId": "LOG-349",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T12:50:18.769Z",
+    "quantityLiters": 16.3,
+    "fatPercentage": 2.9,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1694.56
+  },
+  {
+    "logId": "LOG-350",
+    "farmerId": "FARM-074",
+    "timestamp": "2026-09-06T01:31:18.769Z",
+    "quantityLiters": 28.4,
+    "fatPercentage": 5.9,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 1269.79
+  },
+  {
+    "logId": "LOG-351",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T12:41:18.769Z",
+    "quantityLiters": 17.8,
+    "fatPercentage": 2.4,
+    "snfPercentage": 7,
+    "calculatedPayout": 2066.67
+  },
+  {
+    "logId": "LOG-352",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T02:19:18.769Z",
+    "quantityLiters": 15.3,
+    "fatPercentage": 7.9,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1395.42
+  },
+  {
+    "logId": "LOG-353",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T13:02:18.769Z",
+    "quantityLiters": 29.5,
+    "fatPercentage": 5.6,
+    "snfPercentage": 10,
+    "calculatedPayout": 1192.93
+  },
+  {
+    "logId": "LOG-354",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T01:56:18.769Z",
+    "quantityLiters": 12.5,
+    "fatPercentage": 6.1,
+    "snfPercentage": 10,
+    "calculatedPayout": 1589.97
+  },
+  {
+    "logId": "LOG-355",
+    "farmerId": "FARM-010",
+    "timestamp": "2026-09-06T12:42:18.769Z",
+    "quantityLiters": 24.3,
+    "fatPercentage": 3.8,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 2353.37
+  },
+  {
+    "logId": "LOG-356",
+    "farmerId": "FARM-096",
+    "timestamp": "2026-09-06T01:47:18.769Z",
+    "quantityLiters": 9.7,
+    "fatPercentage": 4.3,
+    "snfPercentage": 8,
+    "calculatedPayout": 1921.88
+  },
+  {
+    "logId": "LOG-357",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:22:18.769Z",
+    "quantityLiters": 38.8,
+    "fatPercentage": 3.7,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 433.98
+  },
+  {
+    "logId": "LOG-358",
+    "farmerId": "FARM-008",
+    "timestamp": "2026-09-06T02:28:18.769Z",
+    "quantityLiters": 18.2,
+    "fatPercentage": 4.1,
+    "snfPercentage": 8,
+    "calculatedPayout": 915.54
+  },
+  {
+    "logId": "LOG-359",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T13:11:18.769Z",
+    "quantityLiters": 26.1,
+    "fatPercentage": 3.5,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1248.19
+  },
+  {
+    "logId": "LOG-360",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T02:22:18.769Z",
+    "quantityLiters": 35.5,
+    "fatPercentage": 2.6,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 993.8
+  },
+  {
+    "logId": "LOG-361",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 23.6,
+    "fatPercentage": 4.8,
+    "snfPercentage": 7,
+    "calculatedPayout": 334.53
+  },
+  {
+    "logId": "LOG-362",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T01:46:18.769Z",
+    "quantityLiters": 21.9,
+    "fatPercentage": 5.9,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 1510.51
+  },
+  {
+    "logId": "LOG-363",
+    "farmerId": "FARM-058",
+    "timestamp": "2026-09-06T12:54:18.769Z",
+    "quantityLiters": 7.1,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1972.76
+  },
+  {
+    "logId": "LOG-364",
+    "farmerId": "FARM-067",
+    "timestamp": "2026-09-06T02:20:18.769Z",
+    "quantityLiters": 18.3,
+    "fatPercentage": 7.8,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 2092.49
+  },
+  {
+    "logId": "LOG-365",
+    "farmerId": "FARM-041",
+    "timestamp": "2026-09-06T13:27:18.769Z",
+    "quantityLiters": 45.1,
+    "fatPercentage": 2.7,
+    "snfPercentage": 7,
+    "calculatedPayout": 2488.69
+  },
+  {
+    "logId": "LOG-366",
+    "farmerId": "FARM-023",
+    "timestamp": "2026-09-06T02:16:18.769Z",
+    "quantityLiters": 17.2,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2232.03
+  },
+  {
+    "logId": "LOG-367",
+    "farmerId": "FARM-050",
+    "timestamp": "2026-09-06T12:51:18.769Z",
+    "quantityLiters": 37.8,
+    "fatPercentage": 5,
+    "snfPercentage": 9,
+    "calculatedPayout": 2418.52
+  },
+  {
+    "logId": "LOG-368",
+    "farmerId": "FARM-070",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 35.9,
+    "fatPercentage": 3.4,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 622.92
+  },
+  {
+    "logId": "LOG-369",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T13:02:18.769Z",
+    "quantityLiters": 34.2,
+    "fatPercentage": 2.9,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 2017.13
+  },
+  {
+    "logId": "LOG-370",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T01:41:18.769Z",
+    "quantityLiters": 11.1,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 643.74
+  },
+  {
+    "logId": "LOG-371",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T12:34:18.769Z",
+    "quantityLiters": 39.8,
+    "fatPercentage": 5.4,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 321.31
+  },
+  {
+    "logId": "LOG-372",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T01:33:18.769Z",
+    "quantityLiters": 29,
+    "fatPercentage": 6.4,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 233.78
+  },
+  {
+    "logId": "LOG-373",
+    "farmerId": "FARM-099",
+    "timestamp": "2026-09-06T13:15:18.769Z",
+    "quantityLiters": 5.7,
+    "fatPercentage": 5.8,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 889.41
+  },
+  {
+    "logId": "LOG-374",
+    "farmerId": "FARM-032",
+    "timestamp": "2026-09-06T01:37:18.769Z",
+    "quantityLiters": 29.2,
+    "fatPercentage": 2.1,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 973.66
+  },
+  {
+    "logId": "LOG-375",
+    "farmerId": "FARM-069",
+    "timestamp": "2026-09-06T12:52:18.769Z",
+    "quantityLiters": 26.3,
+    "fatPercentage": 5.7,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1916.29
+  },
+  {
+    "logId": "LOG-376",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T01:38:18.769Z",
+    "quantityLiters": 37.7,
+    "fatPercentage": 4.9,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 915.9
+  },
+  {
+    "logId": "LOG-377",
+    "farmerId": "FARM-069",
+    "timestamp": "2026-09-06T13:29:18.769Z",
+    "quantityLiters": 32.1,
+    "fatPercentage": 2.4,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1100.36
+  },
+  {
+    "logId": "LOG-378",
+    "farmerId": "FARM-089",
+    "timestamp": "2026-09-06T01:48:18.769Z",
+    "quantityLiters": 33.8,
+    "fatPercentage": 4.7,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 382.42
+  },
+  {
+    "logId": "LOG-379",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T12:59:18.769Z",
+    "quantityLiters": 31.2,
+    "fatPercentage": 6.6,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1176.02
+  },
+  {
+    "logId": "LOG-380",
+    "farmerId": "FARM-086",
+    "timestamp": "2026-09-06T02:29:18.769Z",
+    "quantityLiters": 29.8,
+    "fatPercentage": 6.7,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 2391.85
+  },
+  {
+    "logId": "LOG-381",
+    "farmerId": "FARM-069",
+    "timestamp": "2026-09-06T13:24:18.769Z",
+    "quantityLiters": 38.8,
+    "fatPercentage": 4.6,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 790.18
+  },
+  {
+    "logId": "LOG-382",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T01:30:18.769Z",
+    "quantityLiters": 9.9,
+    "fatPercentage": 6.6,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 2327.3
+  },
+  {
+    "logId": "LOG-383",
+    "farmerId": "FARM-001",
+    "timestamp": "2026-09-06T13:23:18.769Z",
+    "quantityLiters": 27.3,
+    "fatPercentage": 2.3,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 702.6
+  },
+  {
+    "logId": "LOG-384",
+    "farmerId": "FARM-020",
+    "timestamp": "2026-09-06T02:04:18.769Z",
+    "quantityLiters": 33.3,
+    "fatPercentage": 7.8,
+    "snfPercentage": 9,
+    "calculatedPayout": 1500.19
+  },
+  {
+    "logId": "LOG-385",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T13:07:18.769Z",
+    "quantityLiters": 38.7,
+    "fatPercentage": 3,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1553.21
+  },
+  {
+    "logId": "LOG-386",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T01:37:18.769Z",
+    "quantityLiters": 27,
+    "fatPercentage": 4.5,
+    "snfPercentage": 10,
+    "calculatedPayout": 1147.21
+  },
+  {
+    "logId": "LOG-387",
+    "farmerId": "FARM-017",
+    "timestamp": "2026-09-06T13:03:18.769Z",
+    "quantityLiters": 14.5,
+    "fatPercentage": 5.6,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 576.09
+  },
+  {
+    "logId": "LOG-388",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T01:49:18.769Z",
+    "quantityLiters": 10.7,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1135.45
+  },
+  {
+    "logId": "LOG-389",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T12:45:18.769Z",
+    "quantityLiters": 29,
+    "fatPercentage": 6,
+    "snfPercentage": 8,
+    "calculatedPayout": 482.36
+  },
+  {
+    "logId": "LOG-390",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T01:39:18.769Z",
+    "quantityLiters": 34.3,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 781.93
+  },
+  {
+    "logId": "LOG-391",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 25.9,
+    "fatPercentage": 6.7,
+    "snfPercentage": 7,
+    "calculatedPayout": 394.84
+  },
+  {
+    "logId": "LOG-392",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T01:52:18.769Z",
+    "quantityLiters": 31.1,
+    "fatPercentage": 5.8,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 2416.26
+  },
+  {
+    "logId": "LOG-393",
+    "farmerId": "FARM-024",
+    "timestamp": "2026-09-06T13:09:18.769Z",
+    "quantityLiters": 8.5,
+    "fatPercentage": 2.7,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1767.08
+  },
+  {
+    "logId": "LOG-394",
+    "farmerId": "FARM-094",
+    "timestamp": "2026-09-06T02:09:18.769Z",
+    "quantityLiters": 11.1,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1328.66
+  },
+  {
+    "logId": "LOG-395",
+    "farmerId": "FARM-089",
+    "timestamp": "2026-09-06T12:55:18.769Z",
+    "quantityLiters": 36.4,
+    "fatPercentage": 7.3,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 2282.03
+  },
+  {
+    "logId": "LOG-396",
+    "farmerId": "FARM-082",
+    "timestamp": "2026-09-06T02:22:18.769Z",
+    "quantityLiters": 15.2,
+    "fatPercentage": 4.3,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1911.57
+  },
+  {
+    "logId": "LOG-397",
+    "farmerId": "FARM-077",
+    "timestamp": "2026-09-06T13:04:18.769Z",
+    "quantityLiters": 24.4,
+    "fatPercentage": 2.2,
+    "snfPercentage": 8.3,
+    "calculatedPayout": 1694.21
+  },
+  {
+    "logId": "LOG-398",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T01:38:18.769Z",
+    "quantityLiters": 39.5,
+    "fatPercentage": 4.7,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 961.35
+  },
+  {
+    "logId": "LOG-399",
+    "farmerId": "FARM-026",
+    "timestamp": "2026-09-06T12:32:18.769Z",
+    "quantityLiters": 46.9,
+    "fatPercentage": 2.8,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1884.72
+  },
+  {
+    "logId": "LOG-400",
+    "farmerId": "FARM-024",
+    "timestamp": "2026-09-06T01:30:18.769Z",
+    "quantityLiters": 30.3,
+    "fatPercentage": 6.8,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1101.26
+  },
+  {
+    "logId": "LOG-401",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T13:07:18.769Z",
+    "quantityLiters": 19.2,
+    "fatPercentage": 3.3,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2228.31
+  },
+  {
+    "logId": "LOG-402",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T02:12:18.769Z",
+    "quantityLiters": 33.1,
+    "fatPercentage": 3.9,
+    "snfPercentage": 9,
+    "calculatedPayout": 213.15
+  },
+  {
+    "logId": "LOG-403",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T13:01:18.769Z",
+    "quantityLiters": 48.1,
+    "fatPercentage": 3.9,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 1261.02
+  },
+  {
+    "logId": "LOG-404",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 12,
+    "fatPercentage": 6.4,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 2487.18
+  },
+  {
+    "logId": "LOG-405",
+    "farmerId": "FARM-015",
+    "timestamp": "2026-09-06T12:43:18.769Z",
+    "quantityLiters": 30.2,
+    "fatPercentage": 4.5,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 2354.93
+  },
+  {
+    "logId": "LOG-406",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T01:31:18.769Z",
+    "quantityLiters": 11.4,
+    "fatPercentage": 5.1,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1748.17
+  },
+  {
+    "logId": "LOG-407",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:19:18.769Z",
+    "quantityLiters": 35.6,
+    "fatPercentage": 5,
+    "snfPercentage": 9,
+    "calculatedPayout": 1108.59
+  },
+  {
+    "logId": "LOG-408",
+    "farmerId": "FARM-030",
+    "timestamp": "2026-09-06T01:40:18.769Z",
+    "quantityLiters": 34.9,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1871.15
+  },
+  {
+    "logId": "LOG-409",
+    "farmerId": "FARM-078",
+    "timestamp": "2026-09-06T13:26:18.769Z",
+    "quantityLiters": 38.6,
+    "fatPercentage": 2,
+    "snfPercentage": 7,
+    "calculatedPayout": 2337.43
+  },
+  {
+    "logId": "LOG-410",
+    "farmerId": "FARM-045",
+    "timestamp": "2026-09-06T01:37:18.769Z",
+    "quantityLiters": 34.7,
+    "fatPercentage": 4,
+    "snfPercentage": 8,
+    "calculatedPayout": 1341.56
+  },
+  {
+    "logId": "LOG-411",
+    "farmerId": "FARM-064",
+    "timestamp": "2026-09-06T13:16:18.769Z",
+    "quantityLiters": 8.9,
+    "fatPercentage": 3.9,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 808.09
+  },
+  {
+    "logId": "LOG-412",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T01:50:18.769Z",
+    "quantityLiters": 46.9,
+    "fatPercentage": 3.6,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1866.04
+  },
+  {
+    "logId": "LOG-413",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T13:08:18.769Z",
+    "quantityLiters": 35.1,
+    "fatPercentage": 6.9,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 2270.14
+  },
+  {
+    "logId": "LOG-414",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T01:53:18.769Z",
+    "quantityLiters": 42.9,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2446.04
+  },
+  {
+    "logId": "LOG-415",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T12:49:18.769Z",
+    "quantityLiters": 50,
+    "fatPercentage": 5.5,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 788.1
+  },
+  {
+    "logId": "LOG-416",
+    "farmerId": "FARM-087",
+    "timestamp": "2026-09-06T01:39:18.769Z",
+    "quantityLiters": 21,
+    "fatPercentage": 7.4,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 2440.1
+  },
+  {
+    "logId": "LOG-417",
+    "farmerId": "FARM-063",
+    "timestamp": "2026-09-06T12:50:18.769Z",
+    "quantityLiters": 13,
+    "fatPercentage": 2.7,
+    "snfPercentage": 9,
+    "calculatedPayout": 422.85
+  },
+  {
+    "logId": "LOG-418",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T02:08:18.769Z",
+    "quantityLiters": 36.6,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 2177.37
+  },
+  {
+    "logId": "LOG-419",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T13:13:18.769Z",
+    "quantityLiters": 29.3,
+    "fatPercentage": 7.8,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 263.27
+  },
+  {
+    "logId": "LOG-420",
+    "farmerId": "FARM-046",
+    "timestamp": "2026-09-06T01:35:18.769Z",
+    "quantityLiters": 14.9,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8,
+    "calculatedPayout": 1564.63
+  },
+  {
+    "logId": "LOG-421",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T12:40:18.769Z",
+    "quantityLiters": 12.5,
+    "fatPercentage": 7.6,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 2306.63
+  },
+  {
+    "logId": "LOG-422",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T01:33:18.769Z",
+    "quantityLiters": 14.8,
+    "fatPercentage": 2.1,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 2486.62
+  },
+  {
+    "logId": "LOG-423",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T13:03:18.769Z",
+    "quantityLiters": 10.6,
+    "fatPercentage": 7.7,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 622.02
+  },
+  {
+    "logId": "LOG-424",
+    "farmerId": "FARM-038",
+    "timestamp": "2026-09-06T01:51:18.769Z",
+    "quantityLiters": 25.4,
+    "fatPercentage": 4.4,
+    "snfPercentage": 7.1,
+    "calculatedPayout": 521.35
+  },
+  {
+    "logId": "LOG-425",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:38:18.769Z",
+    "quantityLiters": 20.2,
+    "fatPercentage": 3.2,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 370.82
+  },
+  {
+    "logId": "LOG-426",
+    "farmerId": "FARM-024",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 33.2,
+    "fatPercentage": 5.8,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1536.7
+  },
+  {
+    "logId": "LOG-427",
+    "farmerId": "FARM-087",
+    "timestamp": "2026-09-06T13:09:18.769Z",
+    "quantityLiters": 6.6,
+    "fatPercentage": 3.2,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1290.34
+  },
+  {
+    "logId": "LOG-428",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T01:59:18.769Z",
+    "quantityLiters": 37.2,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 888.04
+  },
+  {
+    "logId": "LOG-429",
+    "farmerId": "FARM-063",
+    "timestamp": "2026-09-06T13:19:18.769Z",
+    "quantityLiters": 7.5,
+    "fatPercentage": 5.1,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 1763.7
+  },
+  {
+    "logId": "LOG-430",
+    "farmerId": "FARM-039",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 41.6,
+    "fatPercentage": 7.1,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 1052.32
+  },
+  {
+    "logId": "LOG-431",
+    "farmerId": "FARM-021",
+    "timestamp": "2026-09-06T13:08:18.769Z",
+    "quantityLiters": 42.7,
+    "fatPercentage": 3.3,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 385.29
+  },
+  {
+    "logId": "LOG-432",
+    "farmerId": "FARM-081",
+    "timestamp": "2026-09-06T02:09:18.769Z",
+    "quantityLiters": 36.3,
+    "fatPercentage": 7.3,
+    "snfPercentage": 10,
+    "calculatedPayout": 1185.75
+  },
+  {
+    "logId": "LOG-433",
+    "farmerId": "FARM-037",
+    "timestamp": "2026-09-06T13:06:18.769Z",
+    "quantityLiters": 30.3,
+    "fatPercentage": 3,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 1472.11
+  },
+  {
+    "logId": "LOG-434",
+    "farmerId": "FARM-019",
+    "timestamp": "2026-09-06T01:49:18.769Z",
+    "quantityLiters": 28.1,
+    "fatPercentage": 6.9,
+    "snfPercentage": 10,
+    "calculatedPayout": 1563.47
+  },
+  {
+    "logId": "LOG-435",
+    "farmerId": "FARM-072",
+    "timestamp": "2026-09-06T13:27:18.769Z",
+    "quantityLiters": 31.3,
+    "fatPercentage": 7.2,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1030.31
+  },
+  {
+    "logId": "LOG-436",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T02:19:18.769Z",
+    "quantityLiters": 26.8,
+    "fatPercentage": 6.1,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 1694.52
+  },
+  {
+    "logId": "LOG-437",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T13:10:18.769Z",
+    "quantityLiters": 45,
+    "fatPercentage": 5.2,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 793.1
+  },
+  {
+    "logId": "LOG-438",
+    "farmerId": "FARM-022",
+    "timestamp": "2026-09-06T01:57:18.769Z",
+    "quantityLiters": 18.3,
+    "fatPercentage": 4.7,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 571.51
+  },
+  {
+    "logId": "LOG-439",
+    "farmerId": "FARM-048",
+    "timestamp": "2026-09-06T13:29:18.769Z",
+    "quantityLiters": 15.3,
+    "fatPercentage": 6.5,
+    "snfPercentage": 9,
+    "calculatedPayout": 1865.25
+  },
+  {
+    "logId": "LOG-440",
+    "farmerId": "FARM-086",
+    "timestamp": "2026-09-06T02:07:18.769Z",
+    "quantityLiters": 28.4,
+    "fatPercentage": 2.6,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 245.63
+  },
+  {
+    "logId": "LOG-441",
+    "farmerId": "FARM-029",
+    "timestamp": "2026-09-06T13:27:18.769Z",
+    "quantityLiters": 7.6,
+    "fatPercentage": 3.5,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1149.32
+  },
+  {
+    "logId": "LOG-442",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T02:22:18.769Z",
+    "quantityLiters": 40.3,
+    "fatPercentage": 3.9,
+    "snfPercentage": 9.2,
+    "calculatedPayout": 1936.64
+  },
+  {
+    "logId": "LOG-443",
+    "farmerId": "FARM-052",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 45.6,
+    "fatPercentage": 3,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1957.72
+  },
+  {
+    "logId": "LOG-444",
+    "farmerId": "FARM-010",
+    "timestamp": "2026-09-06T01:56:18.769Z",
+    "quantityLiters": 11.3,
+    "fatPercentage": 4.9,
+    "snfPercentage": 7.9,
+    "calculatedPayout": 2121.01
+  },
+  {
+    "logId": "LOG-445",
+    "farmerId": "FARM-097",
+    "timestamp": "2026-09-06T12:49:18.769Z",
+    "quantityLiters": 5.5,
+    "fatPercentage": 4.6,
+    "snfPercentage": 7.8,
+    "calculatedPayout": 735.39
+  },
+  {
+    "logId": "LOG-446",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 21,
+    "fatPercentage": 4.2,
+    "snfPercentage": 7.3,
+    "calculatedPayout": 2405.21
+  },
+  {
+    "logId": "LOG-447",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 16.2,
+    "fatPercentage": 5.4,
+    "snfPercentage": 8.9,
+    "calculatedPayout": 554.04
+  },
+  {
+    "logId": "LOG-448",
+    "farmerId": "FARM-055",
+    "timestamp": "2026-09-06T02:06:18.769Z",
+    "quantityLiters": 8.2,
+    "fatPercentage": 5.3,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 1084.01
+  },
+  {
+    "logId": "LOG-449",
+    "farmerId": "FARM-049",
+    "timestamp": "2026-09-06T13:28:18.769Z",
+    "quantityLiters": 30.6,
+    "fatPercentage": 2.4,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1744.56
+  },
+  {
+    "logId": "LOG-450",
+    "farmerId": "FARM-066",
+    "timestamp": "2026-09-06T02:25:18.769Z",
+    "quantityLiters": 5.4,
+    "fatPercentage": 4.3,
+    "snfPercentage": 9.1,
+    "calculatedPayout": 1804.73
+  },
+  {
+    "logId": "LOG-451",
+    "farmerId": "FARM-098",
+    "timestamp": "2026-09-06T13:29:18.769Z",
+    "quantityLiters": 8.6,
+    "fatPercentage": 7.9,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 1523.15
+  },
+  {
+    "logId": "LOG-452",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T02:11:18.769Z",
+    "quantityLiters": 47.8,
+    "fatPercentage": 6.3,
+    "snfPercentage": 7.5,
+    "calculatedPayout": 1875.1
+  },
+  {
+    "logId": "LOG-453",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:19:18.769Z",
+    "quantityLiters": 39.3,
+    "fatPercentage": 4,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 2273.05
+  },
+  {
+    "logId": "LOG-454",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T01:49:18.769Z",
+    "quantityLiters": 40.4,
+    "fatPercentage": 3,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 845.19
+  },
+  {
+    "logId": "LOG-455",
+    "farmerId": "FARM-051",
+    "timestamp": "2026-09-06T12:57:18.769Z",
+    "quantityLiters": 29.2,
+    "fatPercentage": 2,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 590.53
+  },
+  {
+    "logId": "LOG-456",
+    "farmerId": "FARM-040",
+    "timestamp": "2026-09-06T01:34:18.769Z",
+    "quantityLiters": 47.5,
+    "fatPercentage": 2.7,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 616.73
+  },
+  {
+    "logId": "LOG-457",
+    "farmerId": "FARM-095",
+    "timestamp": "2026-09-06T13:25:18.769Z",
+    "quantityLiters": 18.8,
+    "fatPercentage": 7.5,
+    "snfPercentage": 7,
+    "calculatedPayout": 1410.51
+  },
+  {
+    "logId": "LOG-458",
+    "farmerId": "FARM-083",
+    "timestamp": "2026-09-06T01:36:18.769Z",
+    "quantityLiters": 25.7,
+    "fatPercentage": 7.6,
+    "snfPercentage": 8,
+    "calculatedPayout": 2197.28
+  },
+  {
+    "logId": "LOG-459",
+    "farmerId": "FARM-011",
+    "timestamp": "2026-09-06T12:37:18.769Z",
+    "quantityLiters": 27.1,
+    "fatPercentage": 6.9,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 1528.92
+  },
+  {
+    "logId": "LOG-460",
+    "farmerId": "FARM-033",
+    "timestamp": "2026-09-06T01:55:18.769Z",
+    "quantityLiters": 8.7,
+    "fatPercentage": 5.3,
+    "snfPercentage": 8.7,
+    "calculatedPayout": 819.05
+  },
+  {
+    "logId": "LOG-461",
+    "farmerId": "FARM-057",
+    "timestamp": "2026-09-06T12:43:18.769Z",
+    "quantityLiters": 36.9,
+    "fatPercentage": 7.2,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1669.69
+  },
+  {
+    "logId": "LOG-462",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T02:07:18.769Z",
+    "quantityLiters": 31.6,
+    "fatPercentage": 5.5,
+    "snfPercentage": 9.5,
+    "calculatedPayout": 1655.36
+  },
+  {
+    "logId": "LOG-463",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T12:50:18.769Z",
+    "quantityLiters": 47.2,
+    "fatPercentage": 5.7,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 1406.23
+  },
+  {
+    "logId": "LOG-464",
+    "farmerId": "FARM-093",
+    "timestamp": "2026-09-06T01:36:18.769Z",
+    "quantityLiters": 46.1,
+    "fatPercentage": 4.1,
+    "snfPercentage": 9,
+    "calculatedPayout": 2107.99
+  },
+  {
+    "logId": "LOG-465",
+    "farmerId": "FARM-004",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 40.4,
+    "fatPercentage": 5.5,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1575.21
+  },
+  {
+    "logId": "LOG-466",
+    "farmerId": "FARM-088",
+    "timestamp": "2026-09-06T02:04:18.769Z",
+    "quantityLiters": 6.1,
+    "fatPercentage": 3.2,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 1157.61
+  },
+  {
+    "logId": "LOG-467",
+    "farmerId": "FARM-013",
+    "timestamp": "2026-09-06T13:05:18.769Z",
+    "quantityLiters": 30.1,
+    "fatPercentage": 4,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 200.62
+  },
+  {
+    "logId": "LOG-468",
+    "farmerId": "FARM-085",
+    "timestamp": "2026-09-06T01:46:18.769Z",
+    "quantityLiters": 12.2,
+    "fatPercentage": 6.7,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 1293.98
+  },
+  {
+    "logId": "LOG-469",
+    "farmerId": "FARM-002",
+    "timestamp": "2026-09-06T12:38:18.769Z",
+    "quantityLiters": 6.8,
+    "fatPercentage": 2.7,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 2441.98
+  },
+  {
+    "logId": "LOG-470",
+    "farmerId": "FARM-003",
+    "timestamp": "2026-09-06T01:46:18.769Z",
+    "quantityLiters": 6.5,
+    "fatPercentage": 4.4,
+    "snfPercentage": 9.9,
+    "calculatedPayout": 615.99
+  },
+  {
+    "logId": "LOG-471",
+    "farmerId": "FARM-028",
+    "timestamp": "2026-09-06T13:26:18.769Z",
+    "quantityLiters": 5.4,
+    "fatPercentage": 5.6,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1328.23
+  },
+  {
+    "logId": "LOG-472",
+    "farmerId": "FARM-038",
+    "timestamp": "2026-09-06T01:47:18.769Z",
+    "quantityLiters": 23.4,
+    "fatPercentage": 2,
+    "snfPercentage": 9,
+    "calculatedPayout": 440.53
+  },
+  {
+    "logId": "LOG-473",
+    "farmerId": "FARM-097",
+    "timestamp": "2026-09-06T12:53:18.769Z",
+    "quantityLiters": 22.2,
+    "fatPercentage": 4.5,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 2387.72
+  },
+  {
+    "logId": "LOG-474",
+    "farmerId": "FARM-054",
+    "timestamp": "2026-09-06T02:19:18.769Z",
+    "quantityLiters": 15.3,
+    "fatPercentage": 2.8,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 458.44
+  },
+  {
+    "logId": "LOG-475",
+    "farmerId": "FARM-061",
+    "timestamp": "2026-09-06T13:17:18.769Z",
+    "quantityLiters": 14.7,
+    "fatPercentage": 6.2,
+    "snfPercentage": 9.6,
+    "calculatedPayout": 1268.1
+  },
+  {
+    "logId": "LOG-476",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 18.3,
+    "fatPercentage": 5.3,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 2188.94
+  },
+  {
+    "logId": "LOG-477",
+    "farmerId": "FARM-076",
+    "timestamp": "2026-09-06T12:40:18.769Z",
+    "quantityLiters": 15.7,
+    "fatPercentage": 7.1,
+    "snfPercentage": 9.8,
+    "calculatedPayout": 574.95
+  },
+  {
+    "logId": "LOG-478",
+    "farmerId": "FARM-006",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 49.8,
+    "fatPercentage": 2.4,
+    "snfPercentage": 7.6,
+    "calculatedPayout": 1211
+  },
+  {
+    "logId": "LOG-479",
+    "farmerId": "FARM-068",
+    "timestamp": "2026-09-06T13:00:18.769Z",
+    "quantityLiters": 31.8,
+    "fatPercentage": 6.5,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1344.47
+  },
+  {
+    "logId": "LOG-480",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T01:32:18.769Z",
+    "quantityLiters": 33,
+    "fatPercentage": 4.1,
+    "snfPercentage": 10,
+    "calculatedPayout": 1877.41
+  },
+  {
+    "logId": "LOG-481",
+    "farmerId": "FARM-075",
+    "timestamp": "2026-09-06T13:26:18.769Z",
+    "quantityLiters": 32.8,
+    "fatPercentage": 5.6,
+    "snfPercentage": 8.6,
+    "calculatedPayout": 832.38
+  },
+  {
+    "logId": "LOG-482",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T02:19:18.769Z",
+    "quantityLiters": 30.7,
+    "fatPercentage": 6,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1773.58
+  },
+  {
+    "logId": "LOG-483",
+    "farmerId": "FARM-036",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 12.6,
+    "fatPercentage": 2,
+    "snfPercentage": 9.3,
+    "calculatedPayout": 1541.43
+  },
+  {
+    "logId": "LOG-484",
+    "farmerId": "FARM-090",
+    "timestamp": "2026-09-06T01:39:18.769Z",
+    "quantityLiters": 38.9,
+    "fatPercentage": 7.5,
+    "snfPercentage": 9.4,
+    "calculatedPayout": 2388.59
+  },
+  {
+    "logId": "LOG-485",
+    "farmerId": "FARM-043",
+    "timestamp": "2026-09-06T12:44:18.769Z",
+    "quantityLiters": 7.1,
+    "fatPercentage": 6.8,
+    "snfPercentage": 9.7,
+    "calculatedPayout": 561.8
+  },
+  {
+    "logId": "LOG-486",
+    "farmerId": "FARM-005",
+    "timestamp": "2026-09-06T01:42:18.769Z",
+    "quantityLiters": 44.6,
+    "fatPercentage": 7.7,
+    "snfPercentage": 9,
+    "calculatedPayout": 384.72
+  },
+  {
+    "logId": "LOG-487",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T13:26:18.769Z",
+    "quantityLiters": 18,
+    "fatPercentage": 3.3,
+    "snfPercentage": 10,
+    "calculatedPayout": 1978.01
+  },
+  {
+    "logId": "LOG-488",
+    "farmerId": "FARM-081",
+    "timestamp": "2026-09-06T01:50:18.769Z",
+    "quantityLiters": 24.7,
+    "fatPercentage": 4,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 559.43
+  },
+  {
+    "logId": "LOG-489",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T13:18:18.769Z",
+    "quantityLiters": 16.4,
+    "fatPercentage": 3.2,
+    "snfPercentage": 7,
+    "calculatedPayout": 2326.63
+  },
+  {
+    "logId": "LOG-490",
+    "farmerId": "FARM-100",
+    "timestamp": "2026-09-06T01:49:18.769Z",
+    "quantityLiters": 33.9,
+    "fatPercentage": 6.5,
+    "snfPercentage": 8.2,
+    "calculatedPayout": 1974.62
+  },
+  {
+    "logId": "LOG-491",
+    "farmerId": "FARM-050",
+    "timestamp": "2026-09-06T12:45:18.769Z",
+    "quantityLiters": 11.4,
+    "fatPercentage": 4.3,
+    "snfPercentage": 9,
+    "calculatedPayout": 1458.96
+  },
+  {
+    "logId": "LOG-492",
+    "farmerId": "FARM-080",
+    "timestamp": "2026-09-06T01:34:18.769Z",
+    "quantityLiters": 43.4,
+    "fatPercentage": 6,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 220.87
+  },
+  {
+    "logId": "LOG-493",
+    "farmerId": "FARM-038",
+    "timestamp": "2026-09-06T12:52:18.769Z",
+    "quantityLiters": 43,
+    "fatPercentage": 3.7,
+    "snfPercentage": 8.8,
+    "calculatedPayout": 1557.08
+  },
+  {
+    "logId": "LOG-494",
+    "farmerId": "FARM-059",
+    "timestamp": "2026-09-06T02:03:18.769Z",
+    "quantityLiters": 17.9,
+    "fatPercentage": 2.1,
+    "snfPercentage": 8.1,
+    "calculatedPayout": 255.51
+  },
+  {
+    "logId": "LOG-495",
+    "farmerId": "FARM-009",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 28.9,
+    "fatPercentage": 5.4,
+    "snfPercentage": 7.7,
+    "calculatedPayout": 1841.99
+  },
+  {
+    "logId": "LOG-496",
+    "farmerId": "FARM-035",
+    "timestamp": "2026-09-06T02:23:18.769Z",
+    "quantityLiters": 22.6,
+    "fatPercentage": 6.8,
+    "snfPercentage": 8.4,
+    "calculatedPayout": 2357.18
+  },
+  {
+    "logId": "LOG-497",
+    "farmerId": "FARM-084",
+    "timestamp": "2026-09-06T12:30:18.769Z",
+    "quantityLiters": 12.4,
+    "fatPercentage": 6,
+    "snfPercentage": 8.5,
+    "calculatedPayout": 1497.41
+  },
+  {
+    "logId": "LOG-498",
+    "farmerId": "FARM-004",
+    "timestamp": "2026-09-06T01:33:18.769Z",
+    "quantityLiters": 11.8,
+    "fatPercentage": 6.9,
+    "snfPercentage": 7.2,
+    "calculatedPayout": 961.46
+  },
+  {
+    "logId": "LOG-499",
+    "farmerId": "FARM-071",
+    "timestamp": "2026-09-06T12:48:18.769Z",
+    "quantityLiters": 20.2,
+    "fatPercentage": 2.6,
+    "snfPercentage": 7.4,
+    "calculatedPayout": 1181.38
+  },
+  {
+    "logId": "LOG-500",
+    "farmerId": "FARM-091",
+    "timestamp": "2026-09-06T01:56:18.769Z",
+    "quantityLiters": 31,
+    "fatPercentage": 4.9,
+    "snfPercentage": 9,
+    "calculatedPayout": 1565.63
+  }
+]
