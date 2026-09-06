@@ -103,3 +103,28 @@ The following validation rules apply across the data model:
 - `name` is required and must not be empty.
 - `locationCoords` must contain valid latitude and longitude values.
 - `tankerCapacityLiters` must be greater than 0.
+  
+## 6. User
+
+The User entity represents staff and manager accounts used for authentication and role-based access to the system.
+
+| Field | Description |
+|---|---|
+| `userId` | Unique identifier for the user |
+| `name` | Name of the staff member or manager |
+| `email` | Email address used for login |
+| `passwordHash` | Hashed password used for authentication |
+| `role` | Access role of the user: `staff` or `manager` |
+| `centerId` | Collection center associated with the user |
+
+### User Field Specifications
+
+| Field | Data Type | Required | Validation / Constraints |
+|---|---|---|---|
+| `userId` | String | Yes | Must be unique; format `USER-XXX` |
+| `name` | String | Yes | Must not be empty |
+| `email` | String | Yes | Must be a valid email address and unique |
+| `passwordHash` | String | Yes | Must contain a securely hashed password |
+| `role` | String | Yes | Must be either `staff` or `manager` |
+| `centerId` | String | Yes | Must reference a valid collection center |
+
