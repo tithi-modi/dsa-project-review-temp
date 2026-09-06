@@ -1,4 +1,4 @@
-# 🥛 Cooperative Dairy Collection & Milk Quality Management System
+#  Cooperative Dairy Collection & Milk Quality Management System
 **CSC210 — Monsoon 2026 | Group 4**  
 *Ahmedabad University*
 
@@ -6,14 +6,14 @@ A three-tier web application combining persistent MongoDB storage with custom in
 
 ---
 
-## 👥 Project Team
+##  Project Team
 * **Tithi Modi** (AU2410174)
 * **Chinmay Ashish Barje** (AU2520178)
 * **Aahana Atul Gattani** (AU2420200)
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The application operates as a three-tier web stack where persistent data is coupled with RAM-bound DSA acceleration modules:
 
