@@ -17,8 +17,8 @@ The Farmer entity represents an individual farmer registered in the dairy collec
 | Field | Data Type | Required | Validation / Constraints |
 |---|---|---|---|
 | `farmerId` | String | Yes | Must be unique; format `FARM-XXX` |
-| `name` | String | Yes | Must contain a valid farmer name |
-| `phone` | String | Yes | Must contain a valid phone number |
+| `name` | String | Yes | Must not be empty; should contain alphabetic characters and spaces |
+| `phone` | String | Yes | Must be a 10-digit phone number |
 | `bankDetails` | Object | Yes | Contains information required for payouts |
 | `centerId` | String | Yes | Must reference a valid collection center |
 
@@ -40,7 +40,7 @@ The Collection Log entity represents a single milk intake/delivery event made by
 
 | Field | Data Type | Required | Validation / Constraints |
 |---|---|---|---|
-| `logId` | String | Yes | Must be unique |
+| `logId` | String | Yes | Must be unique; format `LOG-XXX`|
 | `farmerId` | String | Yes | Must reference a valid farmer |
 | `timestamp` | Date | Yes | Must represent a valid date and time |
 | `quantityLiters` | Number | Yes | Must be greater than 0 |
@@ -63,8 +63,8 @@ The Center Node entity represents a milk collection center.
 
 | Field | Data Type | Required | Validation / Constraints |
 |---|---|---|---|
-| `centerId` | String | Yes | Must be unique |
-| `name` | String | Yes | Must contain a valid center name |
+| `centerId` | String | Yes | Must be unique; format `CENTER-XXX` |
+| `name` | String | Yes | Must not be empty |
 | `locationCoords` | Object | Yes | Must contain valid latitude and longitude |
 | `tankerCapacityLiters` | Number | Yes | Must be greater than 0 |
 
@@ -77,4 +77,29 @@ The Center Node entity represents a milk collection center.
 
 ## 5. Validation Rules
 
-The validation rules defined above will be used as the reference for dummy data generation, database schemas, and API contracts in subsequent project stages.
+The following validation rules apply across the data model:
+
+### Farmer
+
+- `farmerId` must be unique and follow the format `FARM-XXX`.
+- `name` is required and must not be empty.
+- `phone` is required and must contain exactly 10 digits.
+- `bankDetails` is required and must contain the information needed for payouts.
+- `centerId` is required and must reference an existing collection center.
+
+### Collection Log
+
+- `logId` must be unique and follow the format `LOG-XXX`.
+- `farmerId` is required and must reference an existing farmer.
+- `timestamp` is required and must represent a valid date and time.
+- `quantityLiters` must be greater than 0.
+- `fatPercentage` must be between 2.0 and 15.0.
+- `snfPercentage` must be within the project's defined realistic range.
+- `calculatedPayout` must be greater than or equal to 0.
+
+### Center Node
+
+- `centerId` must be unique and follow the format `CENTER-XXX`.
+- `name` is required and must not be empty.
+- `locationCoords` must contain valid latitude and longitude values.
+- `tankerCapacityLiters` must be greater than 0.
