@@ -68,14 +68,33 @@ The Center Node entity represents a milk collection center.
 | `locationCoords` | Object | Yes | Must contain valid latitude and longitude |
 | `tankerCapacityLiters` | Number | Yes | Must be greater than 0 |
 
-## 4. Relationships
+## 4. User
+
+The User entity represents a staff member or manager who can access the system.
+
+| Field | Description |
+|---|---|
+| `username` | Unique login username |
+| `password` | User login password |
+| `role` | User role: `staff` or `manager` |
+
+### User Field Specifications
+
+| Field | Data Type | Required | Validation / Constraints |
+|---|---|---|---|
+| `username` | String | Yes | Must be unique; should not be empty |
+| `password` | String | Yes | Must not be empty |
+| `role` | String | Yes | Must be either `staff` or `manager` |
+
+## 5. Relationships
 
 - A Farmer belongs to a Collection Center through `centerId`.
 - A Collection Log belongs to a Farmer through `farmerId`.
 - A Farmer can have multiple Collection Logs.
 - A Collection Center can have multiple Farmers.
+- A User has a role of either `staff` or `manager` for role-based access to the system.
 
-## 5. Validation Rules
+## 6. Validation Rules
 
 The following validation rules apply across the data model:
 
@@ -94,7 +113,7 @@ The following validation rules apply across the data model:
 - `timestamp` is required and must represent a valid date and time.
 - `quantityLiters` must be greater than 0.
 - `fatPercentage` must be between 2.0 and 15.0.
-- `snfPercentage` must be within the project's defined realistic range.
+- `snfPercentage` is required and must be a valid numeric value.
 - `calculatedPayout` must be greater than or equal to 0.
 
 ### Center Node
@@ -103,28 +122,9 @@ The following validation rules apply across the data model:
 - `name` is required and must not be empty.
 - `locationCoords` must contain valid latitude and longitude values.
 - `tankerCapacityLiters` must be greater than 0.
-  
-## 6. User
 
-The User entity represents staff and manager accounts used for authentication and role-based access to the system.
+### User
 
-| Field | Description |
-|---|---|
-| `userId` | Unique identifier for the user |
-| `name` | Name of the staff member or manager |
-| `email` | Email address used for login |
-| `passwordHash` | Hashed password used for authentication |
-| `role` | Access role of the user: `staff` or `manager` |
-| `centerId` | Collection center associated with the user |
-
-### User Field Specifications
-
-| Field | Data Type | Required | Validation / Constraints |
-|---|---|---|---|
-| `userId` | String | Yes | Must be unique; format `USER-XXX` |
-| `name` | String | Yes | Must not be empty |
-| `email` | String | Yes | Must be a valid email address and unique |
-| `passwordHash` | String | Yes | Must contain a securely hashed password |
-| `role` | String | Yes | Must be either `staff` or `manager` |
-| `centerId` | String | Yes | Must reference a valid collection center |
-
+- `username` must be unique and must not be empty.
+- `password` is required and must not be empty.
+- `role` must be either `staff` or `manager`.

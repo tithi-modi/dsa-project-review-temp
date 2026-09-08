@@ -1,9 +1,14 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 const Farmer = require("./models/Farmer");
 const CollectionLog = require("./models/CollectionLog");
 const CenterNode = require("./models/CenterNode");
 const User = require("./models/User");
+
+const centers = require("./data/centers.json");
+const farmers = require("./data/farmers.json");
+const logs = require("./data/logs.json");
 
 const MONGO_URI =
   process.env.MONGO_URI || "mongodb://127.0.0.1:27017/dairy_collection";
@@ -14,95 +19,25 @@ const seedDatabase = async () => {
 
     console.log("Connected to MongoDB");
 
+    // Clear existing data
     await Farmer.deleteMany({});
     await CollectionLog.deleteMany({});
     await CenterNode.deleteMany({});
     await User.deleteMany({});
 
-    const centers = await CenterNode.insertMany([
-      {
-        centerId: "CENTER-001",
-        name: "Rampur Collection Center",
-        locationCoords: {
-          latitude: 20.5937,
-          longitude: 78.9629
-        },
-        tankerCapacityLiters: 5000
-      },
-      {
-        centerId: "CENTER-002",
-        name: "Shivapur Collection Center",
-        locationCoords: {
-          latitude: 20.6001,
-          longitude: 78.9702
-        },
-        tankerCapacityLiters: 4000
-      }
-    ]);
+    // Insert generated centers
+    await CenterNode.insertMany(centers);
+    console.log(`Inserted ${centers.length} centers`);
 
-    await Farmer.insertMany([
-      {
-        farmerId: "FARM-001",
-        name: "Ramesh Patil",
-        phone: "9876543210",
-        bankDetails: {
-          accountNumber: "1234567890",
-          ifsc: "BANK0001234"
-        },
-        centerId: centers[0].centerId
-      },
-      {
-        farmerId: "FARM-002",
-        name: "Suresh More",
-        phone: "9876543211",
-        bankDetails: {
-          accountNumber: "1234567891",
-          ifsc: "BANK0001234"
-        },
-        centerId: centers[0].centerId
-      },
-      {
-        farmerId: "FARM-003",
-        name: "Anita Sharma",
-        phone: "9876543212",
-        bankDetails: {
-          accountNumber: "1234567892",
-          ifsc: "BANK0005678"
-        },
-        centerId: centers[1].centerId
-      }
-    ]);
+    // Insert generated farmers
+    await Farmer.insertMany(farmers);
+    console.log(`Inserted ${farmers.length} farmers`);
 
-    await CollectionLog.insertMany([
-      {
-        logId: "LOG-001",
-        farmerId: "FARM-001",
-        timestamp: new Date(),
-        quantityLiters: 25,
-        fatPercentage: 4.2,
-        snfPercentage: 8.5,
-        calculatedPayout: 1200
-      },
-      {
-        logId: "LOG-002",
-        farmerId: "FARM-002",
-        timestamp: new Date(),
-        quantityLiters: 30,
-        fatPercentage: 4.5,
-        snfPercentage: 8.7,
-        calculatedPayout: 1500
-      },
-      {
-        logId: "LOG-003",
-        farmerId: "FARM-003",
-        timestamp: new Date(),
-        quantityLiters: 20,
-        fatPercentage: 3.8,
-        snfPercentage: 8.2,
-        calculatedPayout: 950
-      }
-    ]);
+    // Insert generated collection logs
+    await CollectionLog.insertMany(logs);
+    console.log(`Inserted ${logs.length} collection logs`);
 
+    // Insert sample users
     await User.insertMany([
       {
         username: "staff01",
@@ -116,7 +51,8 @@ const seedDatabase = async () => {
       }
     ]);
 
-    console.log("Mock village data inserted successfully");
+    console.log("Inserted 2 users");
+    console.log("Database seeded successfully");
 
     await mongoose.connection.close();
   } catch (error) {
