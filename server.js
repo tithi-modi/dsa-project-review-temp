@@ -6,6 +6,9 @@ const connectDB = require('./config/db');
 const farmerRoutes = require('./routes/farmerRoutes');
 const authRoutes = require('./routes/authRoutes');
 const intakeRoutes = require('./routes/intakeRoutes');
+// --- DAY 3 ADDITIONS ---
+const managerRoutes = require('./routes/managerRoutes');
+const routeRoutes = require('./routes/routeRoutes');
 
 const app = express();
 
@@ -20,6 +23,9 @@ connectDB();
 app.use('/api/farmers', farmerRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/intake', intakeRoutes);
+// --- DAY 3 ADDITIONS ---
+app.use('/api/manager', managerRoutes);
+app.use('/api/routes', routeRoutes);
 
 // Root Health Check Route
 app.get('/', (req, res) => {

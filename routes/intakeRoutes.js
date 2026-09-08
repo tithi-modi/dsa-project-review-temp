@@ -1,8 +1,9 @@
+// routes/intakeRoutes.js
 const express = require('express');
 const router = express.Router();
-const { submitIntake } = require('../controllers/intakeController');
+const { submitIntake, getQueue } = require('../controllers/intakeController');
 
-// POST /api/intake/submit -> calls submitIntake in intakeController.js
 router.post('/submit', submitIntake);
+router.get('/queue', getQueue);
 
 module.exports = router;
