@@ -1,0 +1,20 @@
+[
+  {
+    "centerId": "CENTER-001",
+    "name": "Rampur Collection Center",
+    "locationCoords": {
+      "latitude": 20.5937,
+      "longitude": 78.9629
+    },
+    "tankerCapacityLiters": 5000
+  },
+  {
+    "centerId": "CENTER-002",
+    "name": "Shivapur Collection Center",
+    "locationCoords": {
+      "latitude": 20.6001,
+      "longitude": 78.9702
+    },
+    "tankerCapacityLiters": 4000
+  }
+]
