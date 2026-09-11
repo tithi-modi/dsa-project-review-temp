@@ -1,48 +1,87 @@
-// utils/HashTable.js
-
-// 1. Linked List Node (holds key, value, and next pointer)
 class Node {
-  constructor(key, value) {
-    this.key = key;      // e.g., "FARM-101"
-    this.value = value;  // Full farmer object
-    this.next = null;    // Pointer for collision handling (Day 5)
+  constructor(key, value, next = null) {
+    this.key = key;
+    this.value = value;
+    this.next = next;
   }
 }
 
-// 2. Main HashTable Class
 class HashTable {
   constructor(capacity = 16) {
-    this.buckets = new Array(capacity).fill(null); // Fixed starting size of 16
-    this.capacity = capacity;                      // Total capacity
-    this.count = 0;                                 // Tracks number of elements
+    this.buckets = new Array(capacity).fill(null);
+    this.capacity = capacity;
+    this.count = 0;
   }
 
-  // 3. Custom Hash Function
   _hash(key) {
     let total = 0;
     for (let i = 0; i < key.length; i++) {
       total += key.charCodeAt(i);
     }
-    return total % this.capacity; // Fits result within array bounds
+    return total % this.capacity;
   }
 
-  // 4. Basic set() method
+  getLoadFactor() {
+    return this.count / this.capacity;
+  }
+
+  resize() {
+    const oldBuckets = this.buckets;
+    this.capacity = this.capacity * 2;
+    this.buckets = new Array(this.capacity).fill(null);
+    this.count = 0;
+
+    console.log(`[HashTable] Resizing capacity to ${this.capacity}...`);
+
+    for (let i = 0; i < oldBuckets.length; i++) {
+      let current = oldBuckets[i];
+      while (current) {
+        this.set(current.key, current.value);
+        current = current.next;
+      }
+    }
+  }
+
   set(key, value) {
     const index = this._hash(key);
-    const newNode = new Node(key, value);
-    
-    // Direct store for today (separate chaining handles collisions on Day 5)
-    this.buckets[index] = newNode;
-    this.count++;
+    const head = this.buckets[index];
+
+    if (!head) {
+      this.buckets[index] = new Node(key, value);
+      this.count++;
+    } else {
+      let current = head;
+      while (current) {
+        if (current.key === key) {
+          current.value = value;
+          return;
+        }
+        if (current.next === null) {
+          current.next = new Node(key, value);
+          this.count++;
+          break;
+        }
+        current = current.next;
+      }
+    }
+
+    if (this.getLoadFactor() > 0.75) {
+      this.resize();
+    }
   }
 
-  // 5. Basic get() method
   get(key) {
     const index = this._hash(key);
-    const node = this.buckets[index];
-    
-    if (!node) return null;
-    return node.value;
+    let current = this.buckets[index];
+
+    while (current) {
+      if (current.key === key) {
+        return current.value;
+      }
+      current = current.next;
+    }
+
+    return undefined;
   }
 }
 

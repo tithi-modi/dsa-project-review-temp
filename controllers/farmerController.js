@@ -1,23 +1,41 @@
-// controllers/farmerController.js
+const { farmerHashTable } = require('../utils/hashTableService');
+const fs = require('fs');
+const path = require('path');
 
-// 1. Get farmer details by ID (Stub)
-exports.getFarmerById = async (req, res) => {
+// 1. Get single farmer by ID (O(1) Hash Table Lookup)
+exports.getFarmerById = (req, res) => {
   const { id } = req.params;
-  
-  res.status(200).json({
-    farmerId: id,
-    name: "Ramesh Patel",
-    phone: "9876543210",
-    centerId: "CENTER-001"
+  const farmer = farmerHashTable.get(id);
+
+  if (!farmer) {
+    return res.status(404).json({
+      success: false,
+      message: `Farmer with ID ${id} not found.`
+    });
+  }
+
+  return res.status(200).json({
+    success: true,
+    data: farmer
   });
 };
 
-// 2. Register a new farmer (Stub matching Chinmay's spec)
-exports.registerFarmer = async (req, res) => {
-  const { farmerId, name, phone, bankDetails, centerId } = req.body;
+// 2. Get all farmers (Optional: reads full JSON/DB list)
+exports.getAllFarmers = (req, res) => {
+  try {
+    const filePath = path.join(__dirname, '../data/farmers.json');
+    const rawData = fs.readFileSync(filePath, 'utf-8');
+    const farmers = JSON.parse(rawData);
 
-  res.status(201).json({
-    message: "Farmer registered successfully",
-    farmer: { farmerId, name, phone, bankDetails, centerId }
-  });
+    return res.status(200).json({
+      success: true,
+      count: farmers.length,
+      data: farmers
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Error fetching farmers dataset'
+    });
+  }
 };

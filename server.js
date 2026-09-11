@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+const { hydrateHashTable } = require('./utils/hashTableService');
 const connectDB = require('./config/db');
 const farmerRoutes = require('./routes/farmerRoutes');
 const authRoutes = require('./routes/authRoutes');
@@ -18,6 +19,9 @@ app.use(express.json());
 
 // Database Connection
 connectDB();
+
+// Hydrate In-Memory Hash Table on Boot
+hydrateHashTable();
 
 // API Route Mounts
 app.use('/api/farmers', farmerRoutes);
