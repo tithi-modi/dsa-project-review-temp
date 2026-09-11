@@ -11,7 +11,7 @@ const farmerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    match: /^[A-Za-z ]+$/
+    match: /^[A-Za-z .'-]+$/,
   },
 
   phone: {
