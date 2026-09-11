@@ -1,0 +1,239 @@
+:root {
+  --bg: #f4f1ea;
+  --ink: #24261f;
+  --panel: #2b2d26;
+  --accent: #4c7259;
+  --accent-dark: #3b5a45;
+  --muted: #6b6d63;
+  --border: #ddd8cb;
+  --error: #b3392c;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+button, input {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* --- Layout --- */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+/* --- Typography --- */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.title--small {
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+.subtitle--left {
+  margin: 4px 0 0;
+  text-align: left;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* --- Home role cards --- */
+.role-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.role-card {
+  width: 220px;
+  min-height: 130px;
+  border-radius: 14px;
+  border: none;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  text-align: left;
+  transition: transform 0.12s ease;
+}
+
+.role-card:hover { transform: translateY(-2px); }
+
+.role-card--accent { background: var(--accent); }
+.role-card--dark { background: var(--panel); }
+
+.role-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.role-card__subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* --- Forms --- */
+.login-form, .stacked-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.text-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  margin-top: 16px;
+}
+
+.btn-primary:disabled { opacity: 0.6; cursor: default; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.btn-small { padding: 6px 12px; font-size: 0.85rem; }
+
+.back-link {
+  margin-top: 24px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.result-box {
+  margin-top: 16px;
+  padding: 12px;
+  background: #eef3ee;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* --- Cards / dashboards --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.info-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-card h3 {
+  margin-top: 0;
+}
+
+dl { margin: 0; }
+dt { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+dd { margin: 0; font-weight: 600; }
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.simple-table th, .simple-table td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.stat__value {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.stat__label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
