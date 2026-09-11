@@ -1,46 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const collectionLogSchema = new mongoose.Schema({
-  logId: {
-    type: String,
-    required: true,
-    unique: true,
-    match: /^LOG-\d{3}$/
-  },
+  farmerId: { type: String, required: true, index: true },
+  date: { type: String, required: true },
+  liters: { type: Number, required: true },
+  fat: { type: Number, required: true },
+  snf: { type: Number, required: true },
+  payout: { type: Number, required: true },
+  centerId: { type: String, default: 'CENTER-001' }
+}, { timestamps: true });
 
-  farmerId: {
-    type: String,
-    required: true
-  },
-
-  timestamp: {
-    type: Date,
-    required: true
-  },
-
-  quantityLiters: {
-    type: Number,
-    required: true,
-    min: 0
-  },
-
-  fatPercentage: {
-    type: Number,
-    required: true,
-    min: 2.0,
-    max: 15.0
-  },
-
-  snfPercentage: {
-    type: Number,
-    required: true
-  },
-
-  calculatedPayout: {
-    type: Number,
-    required: true,
-    min: 0
-  }
-});
-
-module.exports = mongoose.model("CollectionLog", collectionLogSchema);
+module.exports = mongoose.model('CollectionLog', collectionLogSchema);

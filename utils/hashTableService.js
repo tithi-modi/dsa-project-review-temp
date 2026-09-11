@@ -1,6 +1,6 @@
-// services/hashTableService.js
+// utils/hashTableService.js
 
-const HashTable = require('../utils/HashTable');
+const HashTable = require('./HashTable');
 const fs = require('fs');
 const path = require('path');
 

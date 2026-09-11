@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { getFarmerById } from "../api/client";
+import { getFarmerById, getFarmerLogs } from "../api/client";
 import PageHeader from "../components/PageHeader";
 
 export default function FarmerDashboard() {
@@ -9,6 +9,7 @@ export default function FarmerDashboard() {
   const navigate = useNavigate();
 
   const [farmer, setFarmer] = useState(null);
+  const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -18,11 +19,32 @@ export default function FarmerDashboard() {
       return;
     }
 
-    getFarmerById(auth.farmerId)
-      .then((res) => setFarmer(res.data?.data ?? res.data))
-      .catch((err) =>
-        setError(err.response?.data?.error?.message || err.message)
-      )
+    setLoading(true);
+    setError("");
+
+    Promise.allSettled([
+      getFarmerById(auth.farmerId),
+      getFarmerLogs(auth.farmerId)
+    ])
+      .then(([farmerResult, logsResult]) => {
+        // Handle Farmer Profile Response
+        if (farmerResult.status === "fulfilled") {
+          setFarmer(farmerResult.value.data?.data ?? farmerResult.value.data);
+        } else {
+          setError(
+            farmerResult.reason?.response?.data?.error?.message ||
+              farmerResult.reason?.message ||
+              "Failed to load farmer details"
+          );
+        }
+
+        // Handle Delivery Logs Response
+        if (logsResult.status === "fulfilled") {
+          setLogs(logsResult.value.data?.data ?? logsResult.value.data ?? []);
+        } else {
+          setLogs([]);
+        }
+      })
       .finally(() => setLoading(false));
   }, [auth, navigate]);
 
@@ -42,7 +64,7 @@ export default function FarmerDashboard() {
       {loading && <p>Loading farmer details...</p>}
       {error && <p className="error-text">{error}</p>}
 
-      {farmer && (
+      {!loading && farmer && (
         <div className="card-grid">
           <div className="info-card">
             <h3>Profile</h3>
@@ -60,13 +82,34 @@ export default function FarmerDashboard() {
 
           <div className="info-card">
             <h3>Delivery History</h3>
-            <p className="muted">
-              The backend does not yet expose a per-farmer delivery/payout
-              history endpoint (see api-contracts.md, section 12.5). Once
-              that endpoint exists, wire it up here — this card is ready to
-              receive a list of <code>CollectionLog</code> entries
-              (liters, fat %, SNF %, payout, date).
-            </p>
+            {logs.length === 0 ? (
+              <p className="muted">No delivery records found.</p>
+            ) : (
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
+                  <thead>
+                    <tr style={{ borderBottom: "1px solid #ddd" }}>
+                      <th style={{ padding: "8px" }}>Date</th>
+                      <th style={{ padding: "8px" }}>Liters</th>
+                      <th style={{ padding: "8px" }}>Fat %</th>
+                      <th style={{ padding: "8px" }}>SNF %</th>
+                      <th style={{ padding: "8px" }}>Payout</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {logs.map((log, index) => (
+                      <tr key={log.id || index} style={{ borderBottom: "1px solid #f0f0f0" }}>
+                        <td style={{ padding: "8px" }}>{log.date}</td>
+                        <td style={{ padding: "8px" }}>{log.liters} L</td>
+                        <td style={{ padding: "8px" }}>{log.fat}%</td>
+                        <td style={{ padding: "8px" }}>{log.snf}%</td>
+                        <td style={{ padding: "8px", fontWeight: "bold" }}>₹{log.payout}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
       )}

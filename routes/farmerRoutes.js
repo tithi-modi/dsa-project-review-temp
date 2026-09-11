@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { getFarmerById, registerFarmer } = require('../controllers/farmerController');
+const farmerController = require('../controllers/farmerController');
 
-router.get('/:id', getFarmerById);
-router.post('/register', registerFarmer);
+router.get('/', farmerController.getAllFarmers);
+router.post('/', farmerController.createFarmer);
+
+// MUST BE BEFORE /:id
+router.get('/:id/logs', farmerController.getFarmerLogs);
+router.get('/:id', farmerController.getFarmerById);
 
 module.exports = router;

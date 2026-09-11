@@ -1,3 +1,5 @@
+// routes/authRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const { loginStaff } = require('../controllers/authController');
