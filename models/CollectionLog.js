@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const collectionLogSchema = new mongoose.Schema({
+  logId: { type: String },
   farmerId: { type: String, required: true, index: true },
   date: { type: String, required: true },
   liters: { type: Number, required: true },

@@ -42,6 +42,7 @@ export default function FarmerDashboard() {
         if (logsResult.status === "fulfilled") {
           setLogs(logsResult.value.data?.data ?? logsResult.value.data ?? []);
         } else {
+          console.error("Delivery History fetch error:", logsResult.reason);
           setLogs([]);
         }
       })
@@ -97,15 +98,34 @@ export default function FarmerDashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {logs.map((log, index) => (
-                      <tr key={log.id || index} style={{ borderBottom: "1px solid #f0f0f0" }}>
-                        <td style={{ padding: "8px" }}>{log.date}</td>
-                        <td style={{ padding: "8px" }}>{log.liters} L</td>
-                        <td style={{ padding: "8px" }}>{log.fat}%</td>
-                        <td style={{ padding: "8px" }}>{log.snf}%</td>
-                        <td style={{ padding: "8px", fontWeight: "bold" }}>₹{log.payout}</td>
-                      </tr>
-                    ))}
+                    {logs.map((log, index) => {
+                      // Extract raw date from all common backend timestamp keys
+                      const rawDate = log.date || log.createdAt || log.timestamp || log.loggedAt || log.dateTime;
+                      let displayDate = "N/A";
+                      if (rawDate) {
+                        const parsed = new Date(rawDate);
+                        displayDate = isNaN(parsed.getTime()) ? String(rawDate) : parsed.toLocaleDateString();
+                      }
+
+                      // Extract numeric values across common key variations
+                      const displayLiters = log.liters ?? log.quantity ?? log.qty ?? log.liter ?? log.litres ?? log.volume ?? 0;
+                      const displayFat = log.fat ?? log.fatPercent ?? log.fatPercentage ?? 0;
+                      const displaySnf = log.snf ?? log.snfPercent ?? log.snfPercentage ?? 0;
+                      const displayPayout = log.payout ?? log.totalPayout ?? log.amount ?? log.totalAmount ?? log.price ?? 0;
+
+                      return (
+                        <tr
+                          key={log._id || log.id || log.logId || index}
+                          style={{ borderBottom: "1px solid #f0f0f0" }}
+                        >
+                          <td style={{ padding: "8px" }}>{displayDate}</td>
+                          <td style={{ padding: "8px" }}>{displayLiters} L</td>
+                          <td style={{ padding: "8px" }}>{displayFat}%</td>
+                          <td style={{ padding: "8px" }}>{displaySnf}%</td>
+                          <td style={{ padding: "8px", fontWeight: "bold" }}>₹{displayPayout}</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

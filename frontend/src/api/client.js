@@ -37,5 +37,8 @@ export const getAnalytics = () => client.get("/api/manager/analytics");
 // --- Routes ------------------------------------------------------------
 // GET /api/routes/optimize
 export const getOptimizedRoute = () => client.get("/api/routes/optimize");
-export const getFarmerLogs = (id) => client.get(`/farmers/${id}/logs`);
+
+// GET /api/farmers/:id/logs
+export const getFarmerLogs = (id) => client.get(`/api/farmers/${id}/logs`);
+
 export default client;
