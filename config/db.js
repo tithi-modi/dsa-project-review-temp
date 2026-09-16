@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
+const dns = require('dns');
+
+// Force Node.js to use Google Public DNS for SRV record resolution
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.log('MongoDB connection skipped/failed. Running in offline stub mode.');
+    console.error(`MongoDB Connection Failed: ${error.message}`);
+    process.exit(1);
   }
 };
 

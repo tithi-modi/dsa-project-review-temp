@@ -14,11 +14,22 @@ function loadStored() {
 }
 
 export function AuthProvider({ children }) {
-  const [auth, setAuth] = useState(loadStored());
+  // Pass loadStored function reference for lazy initialization (runs once on mount)
+  const [auth, setAuth] = useState(loadStored);
 
-  // role: "MANAGER" | "STAFF" | "FARMER"
-  const login = (role, userData) => {
-    const next = { role, ...userData };
+  /**
+   * Supports both usage signatures:
+   * 1. login("FARMER", { farmerId: "FARM-001", name: "Zackary" })
+   * 2. login({ role: "FARMER", farmerId: "FARM-001", name: "Zackary" })
+   */
+  const login = (roleOrData, userData = {}) => {
+    let next;
+    if (typeof roleOrData === "object" && roleOrData !== null) {
+      next = roleOrData;
+    } else {
+      next = { role: roleOrData, ...userData };
+    }
+
     setAuth(next);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
   };

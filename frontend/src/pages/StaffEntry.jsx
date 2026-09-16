@@ -1,79 +1,39 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { submitIntake, getQueue } from "../api/client";
 import PageHeader from "../components/PageHeader";
 
-const EMPTY_FORM = {
-  farmerId: "",
-  quantityLiters: "",
-  fatPercentage: "",
-  snfPercentage: "",
-};
-
-export default function StaffEntry() {
+export default function StaffDesk() {
   const { auth, logout } = useAuth();
   const navigate = useNavigate();
 
-  const [form, setForm] = useState(EMPTY_FORM);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState("");
-  const [lastResult, setLastResult] = useState(null);
+  const [farmerId, setFarmerId] = useState("");
+  const [liters, setLiters] = useState("");
+  const [fat, setFat] = useState("");
+  const [snf, setSnf] = useState("");
 
   const [queue, setQueue] = useState([]);
-  const [queueLoading, setQueueLoading] = useState(true);
-  const [queueError, setQueueError] = useState("");
+  const [logStatus, setLogStatus] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (!auth || auth.role !== "STAFF") {
-      navigate("/login/staff");
+  const fetchQueue = async () => {
+    try {
+      const res = await getQueue();
+      const queueData = res.data?.queue || res.data?.data || [];
+      setQueue(queueData);
+    } catch (err) {
+      console.error("Failed to load queue", err);
     }
-  }, [auth, navigate]);
-
-  const loadQueue = () => {
-    setQueueLoading(true);
-    getQueue()
-      .then((res) => setQueue(res.data?.queue ?? []))
-      .catch((err) =>
-        setQueueError(err.response?.data?.error?.message || err.message)
-      )
-      .finally(() => setQueueLoading(false));
   };
 
   useEffect(() => {
-    loadQueue();
+    fetchQueue();
   }, []);
 
-  const handleChange = (field) => (e) =>
-    setForm((f) => ({ ...f, [field]: e.target.value }));
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitError("");
-    setLastResult(null);
-
-    if (!form.farmerId || !form.quantityLiters) {
-      setSubmitError("Farmer ID and quantity are required.");
-      return;
-    }
-
-    setSubmitting(true);
-    try {
-      const payload = {
-        farmerId: form.farmerId.trim(),
-        quantityLiters: Number(form.quantityLiters),
-        fatPercentage: Number(form.fatPercentage) || 0,
-        snfPercentage: Number(form.snfPercentage) || 0,
-      };
-      const res = await submitIntake(payload);
-      setLastResult(res.data?.data ?? res.data);
-      setForm(EMPTY_FORM);
-      loadQueue();
-    } catch (err) {
-      setSubmitError(err.response?.data?.error?.message || err.message);
-    } finally {
-      setSubmitting(false);
-    }
+  const handleSelectFarmer = (id) => {
+    setFarmerId(id);
   };
 
   const handleLogout = () => {
@@ -81,111 +41,177 @@ export default function StaffEntry() {
     navigate("/");
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLogStatus("");
+
+    const parsedLiters = parseFloat(liters);
+    const parsedFat = parseFloat(fat);
+    const parsedSnf = parseFloat(snf);
+
+    if (!farmerId || isNaN(parsedLiters) || isNaN(parsedFat) || isNaN(parsedSnf)) {
+      setError("Please provide valid numeric values for Liters, Fat %, and SNF %.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const payload = {
+        farmerId: farmerId.trim(),
+        liters: parsedLiters,
+        fat: parsedFat,
+        snf: parsedSnf
+      };
+
+      const res = await submitIntake(payload);
+      const createdLog = res.data?.data || res.data;
+
+      setLogStatus(`Logged: ${createdLog.logId || "LOG-SUCCESS"} — ${parsedLiters} L`);
+
+      // Optimistically remove from queue in React state
+      setQueue((prevQueue) => prevQueue.filter((item) => item.farmerId !== farmerId.trim()));
+
+      setFarmerId("");
+      setLiters("");
+      setFat("");
+      setSnf("");
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Failed to submit milk intake.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="page">
       <PageHeader
         title="Collection Staff — Entry Desk"
-        subtitle={auth?.username ? `Logged in as ${auth.username}` : ""}
+        subtitle={auth?.username || auth?.staffId || "Logged in as Staff"}
         onLogout={handleLogout}
       />
 
-      <div className="card-grid">
-        <div className="info-card">
+      <div className="card-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+        {/* Milk Entry Form */}
+        <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
           <h3>Submit Milk Intake</h3>
-          <form className="stacked-form" onSubmit={handleSubmit}>
-            <label className="field-label">Farmer ID</label>
-            <input
-              className="text-input"
-              value={form.farmerId}
-              onChange={handleChange("farmerId")}
-              placeholder="FARM-001"
-            />
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <label className="field-label">Quantity (liters)</label>
-            <input
-              className="text-input"
-              type="number"
-              step="0.1"
-              value={form.quantityLiters}
-              onChange={handleChange("quantityLiters")}
-              placeholder="15.5"
-            />
+          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <label>
+              Farmer ID
+              <input
+                type="text"
+                value={farmerId}
+                onChange={(e) => setFarmerId(e.target.value)}
+                placeholder="e.g. FARM-001"
+                required
+                style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+              />
+            </label>
 
-            <label className="field-label">Fat %</label>
-            <input
-              className="text-input"
-              type="number"
-              step="0.1"
-              value={form.fatPercentage}
-              onChange={handleChange("fatPercentage")}
-              placeholder="4.2"
-            />
+            <label>
+              Quantity (liters)
+              <input
+                type="number"
+                step="0.1"
+                value={liters}
+                onChange={(e) => setLiters(e.target.value)}
+                placeholder="15.5"
+                required
+                style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+              />
+            </label>
 
-            <label className="field-label">SNF %</label>
-            <input
-              className="text-input"
-              type="number"
-              step="0.1"
-              value={form.snfPercentage}
-              onChange={handleChange("snfPercentage")}
-              placeholder="8.5"
-            />
+            <label>
+              Fat %
+              <input
+                type="number"
+                step="0.1"
+                value={fat}
+                onChange={(e) => setFat(e.target.value)}
+                placeholder="4.2"
+                required
+                style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+              />
+            </label>
 
-            {submitError && <p className="error-text">{submitError}</p>}
+            <label>
+              SNF %
+              <input
+                type="number"
+                step="0.1"
+                value={snf}
+                onChange={(e) => setSnf(e.target.value)}
+                placeholder="8.5"
+                required
+                style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+              />
+            </label>
 
-            <button className="btn btn-primary" type="submit" disabled={submitting}>
-              {submitting ? "Submitting..." : "Submit Intake"}
+            <button
+              type="submit"
+              disabled={loading}
+              style={{
+                backgroundColor: "#4a7c59",
+                color: "#fff",
+                padding: "10px",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
+                marginTop: "10px"
+              }}
+            >
+              {loading ? "Submitting..." : "Submit Intake"}
             </button>
           </form>
 
-          {lastResult && (
-            <div className="result-box">
-              <strong>Logged:</strong> {lastResult.logId} — {lastResult.quantityLiters} L
-              {lastResult.calculatedPayout != null && (
-                <> — payout ₹{lastResult.calculatedPayout}</>
-              )}
+          {logStatus && (
+            <div style={{ marginTop: "15px", padding: "10px", background: "#eaf4ec", borderRadius: "4px" }}>
+              <strong>{logStatus}</strong>
             </div>
           )}
         </div>
 
-        <div className="info-card">
-          <div className="info-card__header">
+        {/* Live Queue Panel */}
+        <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <h3>Live Queue</h3>
-            <button className="btn btn-ghost btn-small" onClick={loadQueue}>
-              Refresh
-            </button>
+            <button onClick={fetchQueue} style={{ padding: "4px 8px", cursor: "pointer" }}>Refresh</button>
           </div>
 
-          {queueLoading && <p>Loading queue...</p>}
-          {queueError && <p className="error-text">{queueError}</p>}
-
-          {!queueLoading && !queueError && (
-            <table className="simple-table">
-              <thead>
+          <table style={{ width: "100%", textAlign: "left", marginTop: "15px", borderCollapse: "collapse" }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid #ddd" }}>
+                <th style={{ padding: "8px" }}>Farmer ID</th>
+                <th style={{ padding: "8px" }}>Name</th>
+                <th style={{ padding: "8px" }}>Arrival</th>
+              </tr>
+            </thead>
+            <tbody>
+              {queue.length === 0 ? (
                 <tr>
-                  <th>Farmer ID</th>
-                  <th>Name</th>
-                  <th>Arrival</th>
+                  <td colSpan="3" style={{ padding: "12px", textAlign: "center", color: "#888" }}>
+                    No farmers in queue.
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {queue.map((q) => (
-                  <tr key={q.farmerId}>
-                    <td>{q.farmerId}</td>
-                    <td>{q.name}</td>
-                    <td>{q.arrivalTime}</td>
+              ) : (
+                queue.map((item) => (
+                  <tr
+                    key={item.farmerId}
+                    onClick={() => handleSelectFarmer(item.farmerId)}
+                    style={{ borderBottom: "1px solid #f0f0f0", cursor: "pointer" }}
+                    title="Click to select this farmer"
+                  >
+                    <td style={{ padding: "8px", fontWeight: "bold", color: "#2b5278" }}>{item.farmerId}</td>
+                    <td style={{ padding: "8px" }}>{item.name || item.farmerName}</td>
+                    <td style={{ padding: "8px" }}>{item.arrivalTime || item.arrival || "Now"}</td>
                   </tr>
-                ))}
-                {queue.length === 0 && (
-                  <tr>
-                    <td colSpan={3} className="muted">
-                      Queue is empty.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          )}
+                ))
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
