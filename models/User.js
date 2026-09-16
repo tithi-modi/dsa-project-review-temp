@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
   username: { 
@@ -12,13 +12,13 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['staff', 'manager', 'farmer'],
+    enum: ["STAFF", "MANAGER", "FARMER", "staff", "manager", "farmer"],
     required: true
   },
   centerId: { 
     type: String, 
-    default: 'CENTER-001' 
+    default: "CENTER-001" // Set to 'ALL' for District Managers
   }
 }, { timestamps: true });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);

@@ -1,3 +1,4 @@
+// controllers/managerController.js
 const CollectionLog = require('../models/CollectionLog');
 const { farmerHashTable } = require('../utils/hashTableService');
 
@@ -6,9 +7,16 @@ exports.getAnalytics = async (req, res) => {
     const today = new Date().toISOString().split('T')[0];
     const from = req.query.from || today;
     const to = req.query.to || from;
+    const centerId = req.query.centerId;
+
+    // Build center-specific match query
+    const matchFilter = { date: { $gte: from, $lte: to } };
+    if (centerId && centerId !== 'ALL') {
+      matchFilter.centerId = centerId;
+    }
 
     const summary = await CollectionLog.aggregate([
-      { $match: { date: { $gte: from, $lte: to } } },
+      { $match: matchFilter },
       {
         $group: {
           _id: null,
@@ -22,7 +30,7 @@ exports.getAnalytics = async (req, res) => {
     ]);
 
     const perFarmer = await CollectionLog.aggregate([
-      { $match: { date: { $gte: from, $lte: to } } },
+      { $match: matchFilter },
       {
         $group: {
           _id: "$farmerId",
@@ -34,7 +42,7 @@ exports.getAnalytics = async (req, res) => {
       }
     ]);
 
-    // Resolve names via the Hash Table — O(1) per farmer, not a DB join
+    // Resolve names via Hash Table lookup — O(1) per farmer
     const farmerBreakdown = perFarmer.map((row) => {
       const farmer = farmerHashTable.get(row._id);
       return {
@@ -52,6 +60,7 @@ exports.getAnalytics = async (req, res) => {
     res.status(200).json({
       status: "success",
       range: { from, to },
+      centerId: centerId || "ALL",
       metrics: {
         totalLiters: m.totalLiters,
         averageFat: Number(m.averageFat?.toFixed(2)) || 0,

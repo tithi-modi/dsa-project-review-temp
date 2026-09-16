@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { submitIntake, getQueue } from "../api/client";
+import { submitIntake, getQueue, arriveFarmer, getIntakeHistory } from "../api/client";
 import PageHeader from "../components/PageHeader";
 
 export default function StaffDesk() {
   const { auth, logout } = useAuth();
   const navigate = useNavigate();
+
+  // Extract logged-in staff's center ID (default to CENTER-001 fallback)
+  const userCenterId = auth?.centerId || "CENTER-001";
 
   const [farmerId, setFarmerId] = useState("");
   const [liters, setLiters] = useState("");
@@ -18,9 +21,22 @@ export default function StaffDesk() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // --- Check-in (arrival) state ---
+  const [arrivalId, setArrivalId] = useState("");
+  const [arrivalStatus, setArrivalStatus] = useState("");
+  const [arrivalError, setArrivalError] = useState("");
+  const [arrivalLoading, setArrivalLoading] = useState(false);
+
+  // --- Intake History state ---
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [historyLogs, setHistoryLogs] = useState([]);
+  const [historyLoading, setHistoryLoading] = useState(false);
+  const [historyError, setHistoryError] = useState("");
+
   const fetchQueue = async () => {
     try {
-      const res = await getQueue();
+      const res = await getQueue(userCenterId);
       const queueData = res.data?.queue || res.data?.data || [];
       setQueue(queueData);
     } catch (err) {
@@ -28,9 +44,25 @@ export default function StaffDesk() {
     }
   };
 
+  const fetchHistory = async () => {
+    setHistoryLoading(true);
+    setHistoryError("");
+    try {
+      const res = await getIntakeHistory(startDate, endDate, userCenterId);
+      const logs = res.data?.data || [];
+      setHistoryLogs(logs);
+    } catch (err) {
+      setHistoryError("Failed to fetch intake history.");
+      console.error(err);
+    } finally {
+      setHistoryLoading(false);
+    }
+  };
+
   useEffect(() => {
     fetchQueue();
-  }, []);
+    fetchHistory();
+  }, [userCenterId]);
 
   const handleSelectFarmer = (id) => {
     setFarmerId(id);
@@ -39,6 +71,32 @@ export default function StaffDesk() {
   const handleLogout = () => {
     logout();
     navigate("/");
+  };
+
+  const handleArrive = async (e) => {
+    e.preventDefault();
+    setArrivalError("");
+    setArrivalStatus("");
+
+    const cleanId = arrivalId.trim();
+    if (!cleanId) {
+      setArrivalError("Enter a Farmer ID (e.g. FARM-049).");
+      return;
+    }
+
+    setArrivalLoading(true);
+    try {
+      await arriveFarmer(cleanId, userCenterId);
+      setArrivalStatus(`${cleanId} checked in successfully.`);
+      setArrivalId("");
+      await fetchQueue();
+    } catch (err) {
+      setArrivalError(
+        err.response?.data?.message || err.message || "Failed to check in farmer."
+      );
+    } finally {
+      setArrivalLoading(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -62,7 +120,8 @@ export default function StaffDesk() {
         farmerId: farmerId.trim(),
         liters: parsedLiters,
         fat: parsedFat,
-        snf: parsedSnf
+        snf: parsedSnf,
+        centerId: userCenterId
       };
 
       const res = await submitIntake(payload);
@@ -70,13 +129,15 @@ export default function StaffDesk() {
 
       setLogStatus(`Logged: ${createdLog.logId || "LOG-SUCCESS"} — ${parsedLiters} L`);
 
-      // Optimistically remove from queue in React state
       setQueue((prevQueue) => prevQueue.filter((item) => item.farmerId !== farmerId.trim()));
 
       setFarmerId("");
       setLiters("");
       setFat("");
       setSnf("");
+
+      // Refresh history table automatically
+      await fetchHistory();
     } catch (err) {
       setError(err.response?.data?.message || err.message || "Failed to submit milk intake.");
     } finally {
@@ -84,10 +145,15 @@ export default function StaffDesk() {
     }
   };
 
+  const handleFilterHistory = (e) => {
+    e.preventDefault();
+    fetchHistory();
+  };
+
   return (
     <div className="page">
       <PageHeader
-        title="Collection Staff — Entry Desk"
+        title={`Collection Staff — Entry Desk (${userCenterId})`}
         subtitle={auth?.username || auth?.staffId || "Logged in as Staff"}
         onLogout={handleLogout}
       />
@@ -96,7 +162,7 @@ export default function StaffDesk() {
         {/* Milk Entry Form */}
         <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
           <h3>Submit Milk Intake</h3>
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p style={{ color: "red", fontWeight: "bold" }}>{error}</p>}
 
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <label>
@@ -177,11 +243,44 @@ export default function StaffDesk() {
         {/* Live Queue Panel */}
         <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <h3>Live Queue</h3>
+            <h3>Live Queue ({userCenterId})</h3>
             <button onClick={fetchQueue} style={{ padding: "4px 8px", cursor: "pointer" }}>Refresh</button>
           </div>
 
-          <table style={{ width: "100%", textAlign: "left", marginTop: "15px", borderCollapse: "collapse" }}>
+          {/* Check-in control */}
+          <form
+            onSubmit={handleArrive}
+            style={{ display: "flex", gap: "8px", marginTop: "15px", marginBottom: "10px" }}
+          >
+            <input
+              type="text"
+              value={arrivalId}
+              onChange={(e) => setArrivalId(e.target.value)}
+              placeholder="Farmer ID, e.g. FARM-049"
+              style={{ flex: 1, padding: "8px" }}
+            />
+            <button
+              type="submit"
+              disabled={arrivalLoading}
+              style={{
+                backgroundColor: "#2b5278",
+                color: "#fff",
+                padding: "8px 14px",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
+                whiteSpace: "nowrap"
+              }}
+            >
+              {arrivalLoading ? "Checking in..." : "Check In Farmer"}
+            </button>
+          </form>
+          {arrivalError && <p style={{ color: "red", margin: "0 0 10px", fontWeight: "bold" }}>{arrivalError}</p>}
+          {arrivalStatus && (
+            <p style={{ color: "#2b5278", margin: "0 0 10px" }}>{arrivalStatus}</p>
+          )}
+
+          <table style={{ width: "100%", textAlign: "left", marginTop: "5px", borderCollapse: "collapse" }}>
             <thead>
               <tr style={{ borderBottom: "1px solid #ddd" }}>
                 <th style={{ padding: "8px" }}>Farmer ID</th>
@@ -193,7 +292,7 @@ export default function StaffDesk() {
               {queue.length === 0 ? (
                 <tr>
                   <td colSpan="3" style={{ padding: "12px", textAlign: "center", color: "#888" }}>
-                    No farmers in queue.
+                    No farmers in queue for {userCenterId}.
                   </td>
                 </tr>
               ) : (
@@ -213,6 +312,102 @@ export default function StaffDesk() {
             </tbody>
           </table>
         </div>
+      </div>
+
+      {/* Intake History Table Panel */}
+      <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px", marginTop: "20px" }}>
+        <h3>Intake Records History ({userCenterId})</h3>
+
+        {/* Date Range Controls */}
+        <form onSubmit={handleFilterHistory} style={{ display: "flex", gap: "15px", alignItems: "center", marginBottom: "15px", marginTop: "10px" }}>
+          <label style={{ display: "flex", gap: "6px", alignItems: "center" }}>
+            From:
+            <input
+              type="date"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+              style={{ padding: "6px" }}
+            />
+          </label>
+          <label style={{ display: "flex", gap: "6px", alignItems: "center" }}>
+            To:
+            <input
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+              style={{ padding: "6px" }}
+            />
+          </label>
+          <button
+            type="submit"
+            style={{
+              padding: "6px 14px",
+              backgroundColor: "#2b5278",
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer"
+            }}
+          >
+            Filter Entries
+          </button>
+        </form>
+
+        {historyError && <p style={{ color: "red" }}>{historyError}</p>}
+
+        <table style={{ width: "100%", textAlign: "left", marginTop: "10px", borderCollapse: "collapse" }}>
+          <thead>
+            <tr style={{ borderBottom: "2px solid #ddd", background: "#f8f9fa" }}>
+              <th style={{ padding: "10px" }}>Farmer ID</th>
+              <th style={{ padding: "10px" }}>Name</th>
+              <th style={{ padding: "10px" }}>Litres</th>
+              <th style={{ padding: "10px" }}>SNF %</th>
+              <th style={{ padding: "10px" }}>Fat %</th>
+              <th style={{ padding: "10px" }}>Payout (₹)</th>
+              <th style={{ padding: "10px" }}>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {historyLoading ? (
+              <tr>
+                <td colSpan="7" style={{ padding: "15px", textAlign: "center", color: "#666" }}>
+                  Loading history logs...
+                </td>
+              </tr>
+            ) : historyLogs.length === 0 ? (
+              <tr>
+                <td colSpan="7" style={{ padding: "15px", textAlign: "center", color: "#888" }}>
+                  No entries found for {userCenterId}.
+                </td>
+              </tr>
+            ) : (
+              historyLogs.map((log) => (
+                <tr key={log._id || log.logId} style={{ borderBottom: "1px solid #eee" }}>
+                  <td style={{ padding: "10px", fontWeight: "bold" }}>{log.farmerId}</td>
+                  <td style={{ padding: "10px" }}>{log.name}</td>
+                  <td style={{ padding: "10px" }}>{log.liters}</td>
+                  <td style={{ padding: "10px" }}>{log.snf}</td>
+                  <td style={{ padding: "10px" }}>{log.fat}</td>
+                  <td style={{ padding: "10px" }}>₹{log.payout}</td>
+                  <td style={{ padding: "10px" }}>
+                    <button
+                      onClick={() => {}}
+                      style={{
+                        padding: "4px 10px",
+                        backgroundColor: "#f0f0f0",
+                        border: "1px solid #ccc",
+                        borderRadius: "4px",
+                        cursor: "pointer"
+                      }}
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   );

@@ -23,16 +23,26 @@ export const registerFarmer = (payload) =>
   client.post("/api/farmers/register", payload);
 
 // --- Intake (Collection Staff) --------------------------------------------
-// POST /api/intake/submit { farmerId, quantityLiters, fatPercentage, snfPercentage }
+// POST /api/intake/arrive { farmerId, centerId }
+export const arriveFarmer = (farmerId, centerId) =>
+  client.post("/api/intake/arrive", { farmerId, centerId });
+
+// POST /api/intake/submit { farmerId, liters, fat, snf, centerId }
 export const submitIntake = (payload) =>
   client.post("/api/intake/submit", payload);
 
-// GET /api/intake/queue
-export const getQueue = () => client.get("/api/intake/queue");
+// GET /api/intake/queue?centerId=...
+export const getQueue = (centerId) =>
+  client.get("/api/intake/queue", { params: { centerId } });
+
+// GET /api/intake/history?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&centerId=...
+export const getIntakeHistory = (startDate, endDate, centerId) =>
+  client.get("/api/intake/history", { params: { startDate, endDate, centerId } });
 
 // --- Manager ---------------------------------------------------------------
-// GET /api/manager/analytics
-export const getAnalytics = () => client.get("/api/manager/analytics");
+// GET /api/manager/analytics?centerId=...
+export const getAnalytics = (centerId) =>
+  client.get("/api/manager/analytics", { params: { centerId } });
 
 // --- Routes ------------------------------------------------------------
 // GET /api/routes/optimize

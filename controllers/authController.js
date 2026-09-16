@@ -12,23 +12,43 @@ exports.loginStaff = async (req, res) => {
       });
     }
 
-    let role = 'staff';
-    const lowerId = String(identifier).toLowerCase();
+    const lowerId = String(identifier).toLowerCase().trim();
+    let role = 'STAFF';
+    let centerId = 'CENTER-001';
 
+    // Role and Center Routing
     if (lowerId.startsWith('farm')) {
-      role = 'farmer';
+      role = 'FARMER';
     } else if (lowerId.startsWith('manager')) {
-      role = 'manager';
+      role = 'MANAGER';
+      if (lowerId === 'manager01' || lowerId === 'manager-001') {
+        centerId = 'CENTER-001';
+      } else if (lowerId === 'manager02' || lowerId === 'manager-002') {
+        centerId = 'CENTER-002';
+      } else {
+        // manager03 or supervisor views all centers
+        centerId = 'ALL';
+      }
+    } else if (lowerId === 'staff02' || lowerId === 'staff-002' || lowerId.includes('staff02')) {
+      role = 'STAFF';
+      centerId = 'CENTER-002';
+    } else {
+      role = 'STAFF';
+      centerId = 'CENTER-001';
     }
+
+    const userPayload = {
+      id: identifier,
+      username: identifier,
+      role: role,
+      centerId: centerId
+    };
 
     return res.status(200).json({
       success: true,
       message: 'Login successful',
-      user: {
-        id: identifier,
-        username: identifier,
-        role: role
-      }
+      user: userPayload,
+      data: userPayload
     });
   } catch (error) {
     console.error('Login error:', error);

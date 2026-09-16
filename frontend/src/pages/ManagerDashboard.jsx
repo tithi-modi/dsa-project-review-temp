@@ -14,13 +14,15 @@ export default function ManagerDashboard() {
   const [routeError, setRouteError] = useState("");
   const [loading, setLoading] = useState(true);
 
+  const userCenterId = auth?.centerId || "ALL";
+
   useEffect(() => {
-    if (!auth || auth.role !== "MANAGER") {
+    if (!auth || (auth.role !== "MANAGER" && auth.role !== "manager")) {
       navigate("/login/manager");
       return;
     }
 
-    Promise.allSettled([getAnalytics(), getOptimizedRoute()]).then(
+    Promise.allSettled([getAnalytics(userCenterId), getOptimizedRoute()]).then(
       ([analyticsRes, routeRes]) => {
         if (analyticsRes.status === "fulfilled") {
           setAnalytics(analyticsRes.value.data);
@@ -42,7 +44,7 @@ export default function ManagerDashboard() {
         setLoading(false);
       }
     );
-  }, [auth, navigate]);
+  }, [auth, navigate, userCenterId]);
 
   const handleLogout = () => {
     logout();
@@ -54,7 +56,7 @@ export default function ManagerDashboard() {
   return (
     <div className="page">
       <PageHeader
-        title="Operations Manager Dashboard"
+        title={`Operations Manager Dashboard (${userCenterId})`}
         subtitle={
           auth?.username ? `Logged in as ${auth.username}` : ""
         }
