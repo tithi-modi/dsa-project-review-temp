@@ -40,9 +40,9 @@ export const getIntakeHistory = (startDate, endDate, centerId) =>
   client.get("/api/intake/history", { params: { startDate, endDate, centerId } });
 
 // --- Manager ---------------------------------------------------------------
-// GET /api/manager/analytics?centerId=...
-export const getAnalytics = (centerId) =>
-  client.get("/api/manager/analytics", { params: { centerId } });
+// GET /api/manager/analytics?from=YYYY-MM-DD&to=YYYY-MM-DD&centerId=...
+export const getAnalytics = (from, to, centerId) =>
+  client.get("/api/manager/analytics", { params: { from, to, centerId } });
 
 // --- Routes ------------------------------------------------------------
 // GET /api/routes/optimize

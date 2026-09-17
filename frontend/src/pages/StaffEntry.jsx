@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { submitIntake, getQueue, arriveFarmer, getIntakeHistory } from "../api/client";
 import PageHeader from "../components/PageHeader";
+import { formatExactTimestamp } from "../utils/formatters";
 
 export default function StaffDesk() {
   const { auth, logout } = useAuth();
   const navigate = useNavigate();
 
-  // Extract logged-in staff's center ID (default to CENTER-001 fallback)
   const userCenterId = auth?.centerId || "CENTER-001";
 
   const [farmerId, setFarmerId] = useState("");
@@ -21,13 +21,11 @@ export default function StaffDesk() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // --- Check-in (arrival) state ---
   const [arrivalId, setArrivalId] = useState("");
   const [arrivalStatus, setArrivalStatus] = useState("");
   const [arrivalError, setArrivalError] = useState("");
   const [arrivalLoading, setArrivalLoading] = useState(false);
 
-  // --- Intake History state ---
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [historyLogs, setHistoryLogs] = useState([]);
@@ -136,7 +134,6 @@ export default function StaffDesk() {
       setFat("");
       setSnf("");
 
-      // Refresh history table automatically
       await fetchHistory();
     } catch (err) {
       setError(err.response?.data?.message || err.message || "Failed to submit milk intake.");
@@ -247,7 +244,6 @@ export default function StaffDesk() {
             <button onClick={fetchQueue} style={{ padding: "4px 8px", cursor: "pointer" }}>Refresh</button>
           </div>
 
-          {/* Check-in control */}
           <form
             onSubmit={handleArrive}
             style={{ display: "flex", gap: "8px", marginTop: "15px", marginBottom: "10px" }}
@@ -285,7 +281,7 @@ export default function StaffDesk() {
               <tr style={{ borderBottom: "1px solid #ddd" }}>
                 <th style={{ padding: "8px" }}>Farmer ID</th>
                 <th style={{ padding: "8px" }}>Name</th>
-                <th style={{ padding: "8px" }}>Arrival</th>
+                <th style={{ padding: "8px" }}>Exact Arrival Time</th>
               </tr>
             </thead>
             <tbody>
@@ -304,8 +300,10 @@ export default function StaffDesk() {
                     title="Click to select this farmer"
                   >
                     <td style={{ padding: "8px", fontWeight: "bold", color: "#2b5278" }}>{item.farmerId}</td>
-                    <td style={{ padding: "8px" }}>{item.name || item.farmerName}</td>
-                    <td style={{ padding: "8px" }}>{item.arrivalTime || item.arrival || "Now"}</td>
+                    <td style={{ padding: "8px" }}>{item.name || item.farmerName || "—"}</td>
+                    <td style={{ padding: "8px", fontFamily: "monospace" }}>
+                      {formatExactTimestamp(item.arrivalTime || item.arrivedAt || item.timestamp || item.createdAt)}
+                    </td>
                   </tr>
                 ))
               )}
@@ -318,7 +316,6 @@ export default function StaffDesk() {
       <div className="info-card" style={{ background: "#fff", padding: "20px", borderRadius: "8px", marginTop: "20px" }}>
         <h3>Intake Records History ({userCenterId})</h3>
 
-        {/* Date Range Controls */}
         <form onSubmit={handleFilterHistory} style={{ display: "flex", gap: "15px", alignItems: "center", marginBottom: "15px", marginTop: "10px" }}>
           <label style={{ display: "flex", gap: "6px", alignItems: "center" }}>
             From:
@@ -358,6 +355,7 @@ export default function StaffDesk() {
         <table style={{ width: "100%", textAlign: "left", marginTop: "10px", borderCollapse: "collapse" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #ddd", background: "#f8f9fa" }}>
+              <th style={{ padding: "10px" }}>Exact Timelog</th>
               <th style={{ padding: "10px" }}>Farmer ID</th>
               <th style={{ padding: "10px" }}>Name</th>
               <th style={{ padding: "10px" }}>Litres</th>
@@ -370,21 +368,24 @@ export default function StaffDesk() {
           <tbody>
             {historyLoading ? (
               <tr>
-                <td colSpan="7" style={{ padding: "15px", textAlign: "center", color: "#666" }}>
+                <td colSpan="8" style={{ padding: "15px", textAlign: "center", color: "#666" }}>
                   Loading history logs...
                 </td>
               </tr>
             ) : historyLogs.length === 0 ? (
               <tr>
-                <td colSpan="7" style={{ padding: "15px", textAlign: "center", color: "#888" }}>
+                <td colSpan="8" style={{ padding: "15px", textAlign: "center", color: "#888" }}>
                   No entries found for {userCenterId}.
                 </td>
               </tr>
             ) : (
               historyLogs.map((log) => (
                 <tr key={log._id || log.logId} style={{ borderBottom: "1px solid #eee" }}>
+                  <td style={{ padding: "10px", fontFamily: "monospace" }}>
+                    {formatExactTimestamp(log.createdAt || log.timestamp || log.date || log.loggedAt)}
+                  </td>
                   <td style={{ padding: "10px", fontWeight: "bold" }}>{log.farmerId}</td>
-                  <td style={{ padding: "10px" }}>{log.name}</td>
+                  <td style={{ padding: "10px" }}>{log.name || "—"}</td>
                   <td style={{ padding: "10px" }}>{log.liters}</td>
                   <td style={{ padding: "10px" }}>{log.snf}</td>
                   <td style={{ padding: "10px" }}>{log.fat}</td>

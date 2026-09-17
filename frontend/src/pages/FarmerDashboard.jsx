@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { getFarmerById, getFarmerLogs } from "../api/client";
 import PageHeader from "../components/PageHeader";
+import { formatExactTimestamp } from "../utils/formatters";
 
 export default function FarmerDashboard() {
   const { auth, logout } = useAuth();
@@ -27,7 +28,6 @@ export default function FarmerDashboard() {
       getFarmerLogs(auth.farmerId)
     ])
       .then(([farmerResult, logsResult]) => {
-        // Handle Farmer Profile Response
         if (farmerResult.status === "fulfilled") {
           setFarmer(farmerResult.value.data?.data ?? farmerResult.value.data);
         } else {
@@ -38,7 +38,6 @@ export default function FarmerDashboard() {
           );
         }
 
-        // Handle Delivery Logs Response
         if (logsResult.status === "fulfilled") {
           setLogs(logsResult.value.data?.data ?? logsResult.value.data ?? []);
         } else {
@@ -90,7 +89,7 @@ export default function FarmerDashboard() {
                 <table style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
                   <thead>
                     <tr style={{ borderBottom: "1px solid #ddd" }}>
-                      <th style={{ padding: "8px" }}>Date</th>
+                      <th style={{ padding: "8px" }}>Exact Timestamp</th>
                       <th style={{ padding: "8px" }}>Liters</th>
                       <th style={{ padding: "8px" }}>Fat %</th>
                       <th style={{ padding: "8px" }}>SNF %</th>
@@ -99,15 +98,8 @@ export default function FarmerDashboard() {
                   </thead>
                   <tbody>
                     {logs.map((log, index) => {
-                      // Extract raw date from all common backend timestamp keys
                       const rawDate = log.date || log.createdAt || log.timestamp || log.loggedAt || log.dateTime;
-                      let displayDate = "N/A";
-                      if (rawDate) {
-                        const parsed = new Date(rawDate);
-                        displayDate = isNaN(parsed.getTime()) ? String(rawDate) : parsed.toLocaleDateString();
-                      }
 
-                      // Extract numeric values across common key variations
                       const displayLiters = log.liters ?? log.quantity ?? log.qty ?? log.liter ?? log.litres ?? log.volume ?? 0;
                       const displayFat = log.fat ?? log.fatPercent ?? log.fatPercentage ?? 0;
                       const displaySnf = log.snf ?? log.snfPercent ?? log.snfPercentage ?? 0;
@@ -118,7 +110,9 @@ export default function FarmerDashboard() {
                           key={log._id || log.id || log.logId || index}
                           style={{ borderBottom: "1px solid #f0f0f0" }}
                         >
-                          <td style={{ padding: "8px" }}>{displayDate}</td>
+                          <td style={{ padding: "8px", fontFamily: "monospace" }}>
+                            {formatExactTimestamp(rawDate)}
+                          </td>
                           <td style={{ padding: "8px" }}>{displayLiters} L</td>
                           <td style={{ padding: "8px" }}>{displayFat}%</td>
                           <td style={{ padding: "8px" }}>{displaySnf}%</td>

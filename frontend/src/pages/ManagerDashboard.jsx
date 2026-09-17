@@ -1,20 +1,37 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { getAnalytics, getOptimizedRoute } from "../api/client";
+import { getAnalytics } from "../api/client";
 import PageHeader from "../components/PageHeader";
 
 export default function ManagerDashboard() {
   const { auth, logout } = useAuth();
   const navigate = useNavigate();
 
+  const getTodayString = () => new Date().toISOString().split("T")[0];
+
+  const [fromDate, setFromDate] = useState(getTodayString());
+  const [toDate, setToDate] = useState(getTodayString());
   const [analytics, setAnalytics] = useState(null);
   const [analyticsError, setAnalyticsError] = useState("");
-  const [route, setRoute] = useState(null);
-  const [routeError, setRouteError] = useState("");
   const [loading, setLoading] = useState(true);
 
   const userCenterId = auth?.centerId || "ALL";
+
+  const fetchAnalyticsData = (from, to) => {
+    setLoading(true);
+    setAnalyticsError("");
+    getAnalytics(from, to, userCenterId)
+      .then((res) => {
+        setAnalytics(res.data?.data ?? res.data);
+      })
+      .catch((err) => {
+        setAnalyticsError(
+          err.response?.data?.error?.message || err.message
+        );
+      })
+      .finally(() => setLoading(false));
+  };
 
   useEffect(() => {
     if (!auth || (auth.role !== "MANAGER" && auth.role !== "manager")) {
@@ -22,99 +39,135 @@ export default function ManagerDashboard() {
       return;
     }
 
-    Promise.allSettled([getAnalytics(userCenterId), getOptimizedRoute()]).then(
-      ([analyticsRes, routeRes]) => {
-        if (analyticsRes.status === "fulfilled") {
-          setAnalytics(analyticsRes.value.data);
-        } else {
-          setAnalyticsError(
-            analyticsRes.reason?.response?.data?.error?.message ||
-              analyticsRes.reason?.message
-          );
-        }
-
-        if (routeRes.status === "fulfilled") {
-          setRoute(routeRes.value.data);
-        } else {
-          setRouteError(
-            routeRes.reason?.response?.data?.error?.message ||
-              routeRes.reason?.message
-          );
-        }
-        setLoading(false);
-      }
-    );
+    fetchAnalyticsData(fromDate, toDate);
   }, [auth, navigate, userCenterId]);
+
+  const handleFilterSubmit = (e) => {
+    e.preventDefault();
+    fetchAnalyticsData(fromDate, toDate);
+  };
 
   const handleLogout = () => {
     logout();
     navigate("/");
   };
 
-  const metrics = analytics?.metrics;
+  const metrics = analytics?.metrics || analytics || {};
+  const farmerBreakdown = analytics?.farmerBreakdown || [];
 
   return (
     <div className="page">
       <PageHeader
         title={`Operations Manager Dashboard (${userCenterId})`}
-        subtitle={
-          auth?.username ? `Logged in as ${auth.username}` : ""
-        }
+        subtitle={auth?.username ? `Logged in as ${auth.username}` : ""}
         onLogout={handleLogout}
       />
 
-      {loading && <p>Loading dashboard...</p>}
-
-      <div className="card-grid">
-        <div className="info-card">
-          <h3>Today's Metrics{analytics?.date ? ` — ${analytics.date}` : ""}</h3>
-          {analyticsError && <p className="error-text">{analyticsError}</p>}
-          {metrics && (
-            <div className="stat-grid">
-              <Stat label="Total Liters" value={metrics.totalLiters} />
-              <Stat label="Avg Fat %" value={metrics.averageFat} />
-              <Stat label="Avg SNF %" value={metrics.averageSnf} />
-              <Stat
-                label="Total Payout"
-                value={`₹${metrics.totalPayoutINR?.toLocaleString?.() ?? metrics.totalPayoutINR}`}
-              />
-              <Stat label="Active Farmers" value={metrics.activeFarmersToday} />
-            </div>
-          )}
-        </div>
-
-        <div className="info-card">
-          <h3>Tanker Route</h3>
-          {routeError && <p className="error-text">{routeError}</p>}
-          {route && (
-            <>
-              <p className="muted">
-                {route.tankerId} — {route.totalDistanceKm} km total
-              </p>
-              <table className="simple-table">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Centre</th>
-                    <th>Est. Volume</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {(route.pickupOrder ?? []).map((stop) => (
-                    <tr key={stop.step}>
-                      <td>{stop.step}</td>
-                      <td>
-                        {stop.name} ({stop.centerId})
-                      </td>
-                      <td>{stop.estimatedVolume} L</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </>
-          )}
-        </div>
+      {/* Date Range Selector */}
+      <div className="info-card" style={{ marginBottom: "20px" }}>
+        <form
+          onSubmit={handleFilterSubmit}
+          style={{ display: "flex", gap: "15px", alignItems: "center", flexWrap: "wrap" }}
+        >
+          <label style={{ fontWeight: "600" }}>
+            From:{" "}
+            <input
+              type="date"
+              value={fromDate}
+              onChange={(e) => setFromDate(e.target.value)}
+              style={{ padding: "6px 10px", marginLeft: "5px", borderRadius: "4px", border: "1px solid #ccc" }}
+            />
+          </label>
+          <label style={{ fontWeight: "600" }}>
+            To:{" "}
+            <input
+              type="date"
+              value={toDate}
+              onChange={(e) => setToDate(e.target.value)}
+              style={{ padding: "6px 10px", marginLeft: "5px", borderRadius: "4px", border: "1px solid #ccc" }}
+            />
+          </label>
+          <button type="submit" style={{ padding: "6px 16px", cursor: "pointer" }}>
+            Apply Filter
+          </button>
+        </form>
       </div>
+
+      {loading && <p>Loading dashboard...</p>}
+      {analyticsError && <p className="error-text">{analyticsError}</p>}
+
+      {!loading && (
+        <>
+          <div className="card-grid">
+            {/* Metrics Card */}
+            <div className="info-card">
+              <h3>
+                Metrics ({fromDate === toDate ? fromDate : `${fromDate} to ${toDate}`})
+              </h3>
+              <div className="stat-grid">
+                <Stat label="Total Liters" value={metrics.totalLiters ?? 0} />
+                <Stat label="Avg Fat %" value={metrics.averageFat ?? metrics.avgFat ?? 0} />
+                <Stat label="Avg SNF %" value={metrics.averageSnf ?? metrics.avgSnf ?? 0} />
+                <Stat
+                  label="Total Payout"
+                  value={`₹${(metrics.totalPayoutINR ?? metrics.totalPayout ?? 0).toLocaleString()}`}
+                />
+                <Stat
+                  label="Active Farmers"
+                  value={metrics.activeFarmersToday ?? metrics.activeFarmers ?? 0}
+                />
+              </div>
+            </div>
+
+            {/* Tanker Route Activity 4 Notice */}
+            <div className="info-card">
+              <h3>Tanker Route</h3>
+              <p className="muted" style={{ marginTop: "15px", lineHeight: "1.6" }}>
+                Route optimization (Graph + Dijkstra + tanker capacity planning) is scheduled for Activity 4 so not yet implemented.
+              </p>
+            </div>
+          </div>
+
+          {/* Farmer Breakdown Table */}
+          <div className="info-card" style={{ marginTop: "20px" }}>
+            <h3>Farmer Summary</h3>
+            {farmerBreakdown.length === 0 ? (
+              <p className="muted" style={{ marginTop: "10px" }}>
+                No farmer records found for this date range.
+              </p>
+            ) : (
+              <div style={{ overflowX: "auto", marginTop: "15px" }}>
+                <table className="simple-table">
+                  <thead>
+                    <tr>
+                      <th>Farmer Name</th>
+                      <th>Farmer ID</th>
+                      <th>Liters</th>
+                      <th>Avg Fat %</th>
+                      <th>Avg SNF %</th>
+                      <th>Payout</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {farmerBreakdown.map((farmer, idx) => (
+                      <tr key={farmer.farmerId || idx}>
+                        <td>{farmer.name || farmer.farmerName || "—"}</td>
+                        <td>{farmer.farmerId || "—"}</td>
+                        <td>{farmer.liters ?? farmer.totalLiters ?? 0} L</td>
+                        <td>{farmer.avgFat ?? farmer.averageFat ?? 0}%</td>
+                        <td>{farmer.avgSnf ?? farmer.averageSnf ?? 0}%</td>
+                        <td style={{ fontWeight: "bold" }}>
+                          ₹{farmer.payout ?? farmer.totalPayout ?? 0}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
